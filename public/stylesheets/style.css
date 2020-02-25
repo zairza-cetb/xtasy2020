@@ -1,6 +1,20 @@
 body {
-  overflow: hidden;
+  background:fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../images/desktop.png") ;
+  overflow-y: hidden;
+  padding: 0;
+  margin: 0;   
 }
+
+@media screen and (max-width: 767px) {
+  body {
+    background-size: fit;
+    background-image: url("../images/mob.png");
+  }
+  }
+
 input {
   position: absolute;
   display: none;
@@ -80,9 +94,7 @@ input {
   -webkit-transition-delay: 0.4s;
   transition-delay: 0.4s;
 }
-/* .btn:nth-child(5) {top:0px;left:0px;-webkit-transition-delay: 0.3s;transition-delay: 0.3s}
-.btn:nth-child(6) {top:0px;-webkit-transition-delay: 0.4s;transition-delay: 0.4s}
-.btn:nth-child(7) {top:0px;left:0px;-webkit-transition-delay: 0.5s;transition-delay: 0.5s} */
+
 .btn:nth-child(8) {
   left: 0px;
   -webkit-transition-delay: 0s;
@@ -114,17 +126,6 @@ input#toggle:checked ~ #show-menu .btn:nth-child(4) {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 
-/* input#toggle:checked ~ #show-menu .btn:nth-child(5) {
-  top :100px;left:100px;opacity:1;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-}
-
-input#toggle:checked ~ #show-menu .btn:nth-child(6) {
-  top:150px;opacity:1;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-}
-
-input#toggle:checked ~ #show-menu .btn:nth-child(7) {
-  top:100px;left:-100px;opacity:1;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-} */
 
 input#toggle:checked ~ #show-menu .btn:nth-child(8) {
   left: -150px;
