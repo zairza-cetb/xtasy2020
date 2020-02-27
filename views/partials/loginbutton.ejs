@@ -1,0 +1,76 @@
+<style>
+  .section {
+    width: 100%;
+    height: 400px;
+    padding: 0;
+    position: absolute;
+  }
+  .two #button {
+    width: 122px;
+    padding: 16px;
+    height: 30px;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    position: absolute;
+    top: 20%;
+    left: 90%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: transparent;
+    overflow: hidden;
+    -webkit-transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    -moz-transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    -o-transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #fff;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -o-border-radius: 50px;
+    border-radius: 50px;
+    border: #594a83 solid 8px;
+    z-index: 0;
+  }
+  .two #button::after {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    height: 100%;
+    background-image: -webkit-gradient(
+      linear,
+      0 0,
+      100% 0,
+      from(#fff),
+      to(transparent)
+    );
+    background-image: -webkit-linear-gradient(left, #fff, transparent);
+    background-image: -moz-linear-gradient(left, #fff, transparent);
+    background-image: -o-linear-gradient(left, #fff, transparent);
+    z-index: -1;
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+  }
+  .two #button:hover::after {
+    width: 800%;
+  }
+  .two #button:hover {
+    color: #505050;
+    box-shadow: 0px 20px 8px rgba(0, 0, 0, 0.6);
+  }
+</style>
+<div class="section two">
+  <div id="button">
+    Login/Register
+    <div class="ring one"></div>
+    <div class="ring two"></div>
+    <div class="ring three"></div>
+    <div class="ring four"></div>
+  </div>
+</div>
