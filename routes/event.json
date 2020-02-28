@@ -1,0 +1,90 @@
+{
+    "1": {
+        "event": "Rescue Rangers",
+        "desc": "The participating teams will have to build their manual robot that conquers the various obstacles and hurdles put forward. Inclined planes, rough terrain, fire and water, slippery roads and whatnot. The robot that finishes the track in one piece, scoring the highest points in the minimum amount of time, earns its team the winning title.",
+        "cat":"flagship",
+        "form_link":"https://forms.gle/MgiviaR3xbir7SDi6",
+        "doc_link":"https://drive.google.com/file/d/1d-8yfXaRKT0FEK6D17KDUgGkuZGKF47a/view?usp=sharing",
+        "heading":"Rescue Rangers",
+        "small_desc":"  ",
+        "date_time":" 15th Feb 10:00am (Prelims)",
+        "venue":"Basketball Court"
+    },
+    "2": {
+        "event": "Code Busters",
+        "desc": "A competitive coding challenge in which the participating teams will have to code to find solutions for the given problems in an allotted time.\n",
+        "cat":"flagship",
+        "form_link":"https://forms.gle/coS9AWfiepA3sapE7",
+        "doc_link":"https://drive.google.com/file/d/1kKIOx8QlWDsjN2wdlKkK5sqRLbbxC3Xn/view?fbclid=IwAR0GQIJqIJh6Yi5a7zqYNymNFwrVirjxxo1QnVc7H-EkilsH6GlAtrf0h5o",
+        "heading":"Code Busters",
+        "small_desc":"Coding challenge",
+        "date_time":"14th Feb 10:00am ",
+        "venue":"B Block, 4th floor"
+    },
+    "3": {
+        "event": "Web Weavers",
+        "desc": "The participants will be provided with mini-tasks relating to Web Development. Their final work (after the completion of specified time) will be evaluated to check if they meet the specified criteria for the problem statement.",
+        "cat":"technical",
+        "form_link":"#",
+        "doc_link":"https://drive.google.com/file/d/1r4dmhlqtx_9WSbc3M1GytdtQyUjuMW2j/view?fbclid=IwAR3Uizt5fZuzHwCHg40ieMTOnEOiFY0d-dRRLODIZkUaJ9CSNgAlB_BnwqY",
+        "heading":"Web Weavers",
+        "small_desc":"Difficult task to search from web",
+        "date_time":" 14th Feb 1:30pm(prelims)",
+        "venue":"B Block, 4th floor"
+    },
+    "4": {
+        "event": "Dig the Web",
+        "desc": "Believe it or not, the participating teams will be allowed to access the Internet in this event. The teams will be given tricky questions which they might not be able to solve in their first glance. To find the answer, the Internet will be their best friend. The team that makes the best of the Internet to earn the maximum points will be declared the winner.",
+        "cat":"technical",
+        "form_link":"#",
+        "doc_link":"https://www.facebook.com/perception.cetb/photos/a.1532056833712495/2469682899949879/?type=3&theater",
+        "heading":"Dig the Web",
+        "small_desc":"Find Clues from Google",
+        "date_time":"15th Feb 3:00pm ",
+        "venue":"A Block, 4th floor "
+    },
+    "5": {
+        "event": "Enchanted Maze",
+        "desc": "The participating teams will have to build a line follower robot that senses and follows a certain path, and avoids any obstacles (if any). The team which is able to complete the track in the minimum time will be the winner.",
+        "cat":"technical",
+        "form_link":"https://docs.google.com/forms/d/e/1FAIpQLSfc_LxDhJBw-e91ocdR-Crsbg2-x_TLJaHF-IPHzV4uMZihOA/viewform",
+        "doc_link":"https://drive.google.com/file/d/1gnVJQyaehMMY4EP8uAmkhw5_a67rJMrN/view?fbclid=IwAR35fAYp8Zg2cXH2v4h6zRT_AlpMACtaL3fqeRGwOH4el6tfGgAgOYsob_o",
+        "heading":"Enchanted Maze",
+        "small_desc":"Line following robot",
+        "date_time":"14th Feb 3:00pm ",
+        "venue":"Badminton Court "
+    },
+    "6": {
+        "event": "Wartalaap",
+        "desc": "Would India achieve its economic targets or collapse? Is world peace at stake? What about climate change? Questions are plenty and the voices should be huge. Come make an impact and be heard. PERCEPTION brings you 'Wartalaap', a debate competition which revolves around current topics.",
+        "cat":"literary",
+        "form_link":"#",
+        "doc_link":"#",
+        "heading":"Wartalaap",
+        "small_desc":"Don't Settle! Debate!",
+        "date_time":"16th Feb 10:00am ",
+        "venue":"B Block, 4th floor "
+    },
+    "7": {
+        "event": "Wordsworth",
+        "desc": "We are ready to begin the vocabulary marathon. Pack your dictionaries and join the run because PERCEPTION brings you the event 'Wordsworth' where your knowledge of vocabulary will be tested. Tiptoe them with words; with anagrams, crosswords and vocabulary-based fun challenges, we will bring out the creative quotient in you. So keep your 'word-root' strong, for we come to thrill your brains.",
+        "cat":"literary",
+        "form_link":"#",
+        "doc_link":"#",
+        "heading":"Wordsworth",
+        "small_desc":"Challenge your Vocabulary!",
+        "date_time":"16th Feb 2:00pm(Final) ",
+        "venue":"A Block, 4th floor "
+    },
+    "8": {
+        "event": "Qurious",
+        "desc": "The annual general quiz of CET Bhubaneswar, QURIOUS, promises to be a treat for the geeks and nerds. It will be an exercise for your grey cells. In a society where knowledge is power, the event is bound to enrich and enhance your quest for it.",
+        "cat":"flagship",
+        "form_link":"#",
+        "doc_link":"https://drive.google.com/file/d/1Rbtg65QKKR-4W2EejtA1SqRb-paX3pca/view?fbclid=IwAR1Yds5xfDjYevk1DJ38Zcsg_W9-iIRHbKxXanOlQPGUsAkxuUxHXyDfmEQ",
+        "heading":"Qurious",
+        "small_desc":"  ",
+        "date_time":"15th Feb 10:00am ",
+        "venue":"B Block, 4th floor "
+    }
+}
