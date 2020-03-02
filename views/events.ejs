@@ -4,24 +4,22 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Events</title>
-		<meta name="description" content="A triple view diagonal slideshow with content preview." />
-		<meta name="keywords" content="" />
-		<meta name="author" content="Codrops" />
 		<link rel="shortcut icon" href="favicon.ico">
         <link rel="stylesheet" type="text/css" href="stylesheets/base.css" />
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-		<script>
-		document.documentElement.className = "js";
-		var supportsCssVars = function() { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e };
-		supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
-		</script>
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     </head>
     
 	<body>
 		<%- include('partials/modal') %>
-		<h1 class="title">Events</h1>
+		<div class="title">
+            <span class="top right"></span>
+            <span class="top left"></span>
+            <h2>Events</h2>
+            <span class="bottom right"></span>
+            <span class="bottom left"></span>
+        </div>
 		<div id="app" class="container">
-			<% for(var i=1;i<4;i++) { %>	
+			<% for(var i=1;i<18;i++) { %>	
 			<card class="evbtn" data-image="images/xtasy.jpg">
 				<h1 slot="header"><%= evjson[i]["event"] %></h1>
 				<p slot="content"><%= evjson[i]["desc"].substring(0, 200) %>...</p>

@@ -11,15 +11,14 @@
   </head>
   <body>
     <div class="container">
-        <form method="post">
+        <form action="/login" method="POST">
           <h1>
             Log in
           </h1>
           <div class="form-content">
-            <input id="user-name" name="username" placeholder="Email Address" type="text" /><input id="password" name="password" placeholder="Password" type="password" /><br />
-            <div class="button">
-              Log in
-            </div>
+            <input id="user-name" name="username" placeholder="Email" type="text" required />
+            <input id="password" name="password" placeholder="Password" type="password" required /><br />
+            <input class="button" type="submit">
             <br />
             <div class="signup-message">
               <a href="#">Forgot your password?</a>

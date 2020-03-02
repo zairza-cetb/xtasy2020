@@ -1,0 +1,42 @@
+body {
+	background: #ECECEC;
+}
+.title {
+    text-align: center;
+    position: relative;
+    margin: 50px auto;
+  }
+  h2 {
+    font-family: arial;
+    color: #333;
+    font-size: 40px;
+    text-align: center;
+    margin: 0 20px;
+    padding: 0 15px;
+    text-transform: uppercase;
+  }
+  span {
+    display: inline-block;
+    position: absolute;
+    background: #faa;
+    height: 3px;
+  }
+  span.top {
+    width: 70px;
+    top: 20px;
+  }
+  span.bottom {
+    width: 120px;
+    top: 35px;
+  }
+  span.left {
+    left: 48%;
+    transform: translateX(-150px);
+  }
+  span.bottom.left {
+    transform: translateX(-200px);
+  }
+  span.right {
+    left: 52%;
+    transform: translateX(80px);
+  }
