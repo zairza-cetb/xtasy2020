@@ -17,7 +17,7 @@ $(document).ready(function() {
       $("#mod__form_desc").hide();
       
 
-      $("#mod__cover").attr("src", "/img/alt.jpeg");
+      $("#mod__cover").attr("src", "/images/xtasy.jpg");
 
       // Check if the user is already registered for the event
       // and set the function of the button as required

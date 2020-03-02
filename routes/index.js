@@ -1,4 +1,5 @@
 var express = require('express');
+var events_json = require("./event.json");
 var router = express.Router();
 
 /* GET home page. */
@@ -18,10 +19,10 @@ router.get("/login", function (req, res, next) {
 
 // GET Event Page
 router.get('/events', function (req, res, next) {
-  res.render('events');
+  res.render('events', { evjson: events_json });
 });
 // GET Sponsers Page
-router.get('/sponsers', function (req, res, next) {
+router.get('/sponsors', function (req, res, next) {
   res.render('sponsers');
 });
 // GET Star Page
