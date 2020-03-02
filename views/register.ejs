@@ -2,36 +2,24 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-
-    <!-- Title Page-->
     <title>Registration</title>
 
-    <!-- Icons font CSS-->
-    <!-- <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all"> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
 
-    <!-- <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all"> -->
     <link
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
       integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
       crossorigin="anonymous"
     />
-    <!-- Font special for pages-->
+
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
     
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" rel="stylesheet" media="all">
 
-    <!-- Vendor CSS-->
-    <!-- <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all"> -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" rel="stylesheet" media="all">
-
-    <!-- <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all"> -->
-
-    <!-- Main CSS-->
     <link href="stylesheets/register.css" rel="stylesheet" media="all">
 </head>
 
@@ -42,20 +30,14 @@
                 <div class="card-heading"></div>
                 <div class="card-body">
                     <h2 class="title">Registration Info</h2>
-                    <form method="POST">
+                    <form action="/register" method="POST">
                         <div class="input-group">
-                            <input class="input--style-1" type="email" placeholder="Email" name="email" required>
+                            <input class="input--style-1" type="email" placeholder="Email" name="username" required>
                         </div>
                         <div class="input-group">
                             <input class="input--style-1" type="text" placeholder="Name" name="name" required>
                         </div>
                         <div class="row row-space">
-                            <!-- <div class="col-2">
-                                <div class="input-group">
-                                    <input class="input--style-1 js-datepicker" type="text" placeholder="BIRTHDATE" name="birthday">
-                                    <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
-                                </div>
-                            </div> -->
                             <div class="col-2">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
@@ -70,32 +52,20 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="input-group">
-                            <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="class">
-                                    <option disabled="disabled" selected="selected">CLASS</option>
-                                    <option>Class 1</option>
-                                    <option>Class 2</option>
-                                    <option>Class 3</option>
-                                </select>
-                                <div class="select-dropdown"></div>
-                            </div>
-                        </div> -->
+                        
                         <div class="input-group">
-                            <input class="input--style-1" type="text" placeholder="College Name" name="college" required>
+                            <input class="input--style-1" type="text" placeholder="College" name="college" required>
                         </div>
                         <div class="input-group">
                             <input class="input--style-1" type="text" placeholder="Phone" name="phone" pattern="[1-9]{1}[0-9]{9}" required>
                         </div>
                         <div class="input-group">
-                            <input class="input--style-1" type="password" placeholder="Password" name="password" required>
+                            <input class="input--style-1" type="password" placeholder="Password" name="password" id="password" required>
                         </div>
                         <div class="input-group">
-                            <input class="input--style-1" type="password" placeholder="Confirm Password" name="password" required>
+                            <input class="input--style-1" type="password" placeholder="Confirm Password" name="cpassword" id="cpassword" required>
                         </div>
-                        <div class="button">
-                            Submit
-                          </div>
+                        <input class="button" type="submit">
                           <br />
                           <div class="signup-message">
                             <a href="/login">Already Registered?</a>
@@ -107,21 +77,27 @@
         </div>
     </div>
 
-    <!-- Jquery JS-->
-    <!-- <script src="vendor/jquery/jquery.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- Vendor JS-->
-    <!-- <script src="vendor/select2/select2.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.min.js"></script>
-
-    <!-- <script src="vendor/datepicker/moment.min.js"></script> -->
-    <!-- <script src="vendor/datepicker/daterangepicker.js"></script> -->
-
-    <!-- Main JS-->
     <script src="js/register.js"></script>
+
+    <script>
+        var password = document.getElementById("password")
+        , confirm_password = document.getElementById("cpassword");
+
+        function validatePassword(){
+        if(password.value != confirm_password.value) {
+            confirm_password.setCustomValidity("Passwords Don't Match");
+        } else {
+            confirm_password.setCustomValidity('');
+            }
+        }
+
+        password.onchange = validatePassword;
+        confirm_password.onkeyup = validatePassword;
+    </script>
 
 </body>
 
 </html>
-<!-- end document-->

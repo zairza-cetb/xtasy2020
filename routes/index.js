@@ -1,14 +1,17 @@
-var express = require('express');
+var express = require('express'),
+    mongoose = require('mongoose'),
+    User = require('../model/users');
+var events_json = require("./event.json");
 var router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
   res.render('index', { title: 'Xstasy' });
 });
+
+// GET register page
 router.get("/register", function (req, res, next) {
-  res.render("register", {
-    err: req.query.err
-  });
+  res.render("register");
 });
 
 /* GET login page. */
@@ -18,15 +21,15 @@ router.get("/login", function (req, res, next) {
 
 // GET Event Page
 router.get('/events', function (req, res, next) {
-  res.render('events');
+  res.render('events', { evjson: events_json });
 });
 // GET Sponsers Page
-router.get('/sponsers', function (req, res, next) {
+router.get('/sponsors', function (req, res, next) {
   res.render('sponsers');
 });
 // GET Star Page
 router.get('/stars', function (req, res, next) {
-  res.render('star')
+  res.render('stars')
 });
 // GET Gallery Page
 router.get('/gallery', function (req, res, next) {

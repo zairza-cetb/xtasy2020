@@ -9,7 +9,11 @@
     <span class="hamburger hamburger-3"></span>
   </label>
   
-  <a href="/login" class="menu-item" > <i class="fa fa-bar-chart"></i> </a>
+  <% if(currentUser) { %>
+    <a href="/logout" class="menu-item" > <i class="fa fa-bar-chart"></i> </a>
+  <% } else { %>
+    <a href="/login" class="menu-item" > <i class="fa fa-bar-chart"></i> </a>
+  <% } %>  
   <a href="/sponsors" class="menu-item"> <i class="fa fa-plus"></i> </a>
   <a href="/gallery" class="menu-item"> <i class="fa fa-heart"></i> </a>
   <a href="/events" class="menu-item"> <i class="fa fa-envelope"></i> </a>
@@ -17,8 +21,6 @@
 
 </nav>
 
-
-<!-- filters -->
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
     <defs>
       <filter id="shadowed-goo">
