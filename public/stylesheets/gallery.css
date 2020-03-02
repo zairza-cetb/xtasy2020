@@ -69,7 +69,7 @@ body {
     opacity: 0;
   }
   .byebye:hover {
-    transform: scale(0.2) !important;
+    transform: scale(0.2) !important; 
   }
   .gallery {
     display: grid;
