@@ -4,7 +4,10 @@
 *::after {
   box-sizing: border-box;
 }
-
+html, body{
+  height: 100%;
+  overflow: hidden;
+}
 
 body {
   font-family: "Quicksand", sans-serif;
@@ -15,7 +18,9 @@ body {
   background: url("../images/jan-baborak-dfdlZ4CHUkI-unsplash.jpg") no-repeat;
   background-position: center top;
   background-size: cover;
+
 }
+
 
 h1 {
   font-weight: 700;
