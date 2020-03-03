@@ -19,6 +19,11 @@ router.get("/login", function (req, res, next) {
   res.render("login");
 });
 
+/* GET resetPassword page. */
+router.get("/resetPassword", function (req, res, next) {
+  res.render("resetPassword");
+});
+
 // GET Event Page
 router.get('/events', function (req, res, next) {
   res.render('events', { evjson: events_json });
