@@ -6,7 +6,7 @@
 }
 
 body {
-  background-image: url(https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=1600);
+  background-image: url("../images/bg1.jpg");
   background-size: cover;
   background-position: 50% 50%;
   min-height: 100vh;
