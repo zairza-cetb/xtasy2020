@@ -190,7 +190,7 @@ body {
   }
   h2 {
     text-align: center;
-    margin: 60px 15px 0;
+    margin: 40px 15px 0;
     padding: 0;
     font-weight: 300;
   }
@@ -200,11 +200,11 @@ body {
     font-size: 85%;
   }
   .column {
-    margin: 15px 15px 0;
+    margin: 10px 15px 0;
     padding: 0;
   }
   .column:last-child {
-    padding-bottom: 60px;
+    padding-bottom: 40px;
   }
   .column::after {
     content: "";
@@ -216,17 +216,24 @@ body {
     float: left;
     width: 300px;
     height: 200px;
-    margin: 0 0 0 25px;
+    margin: 0 0 0 15px;
     padding: 0;
   }
   .column div:first-child {
-    margin-left: 0;
+    /* margin-left: 0; */
+    position: relative;
+    float: left;
+    width: 300px;
+    height: 200px;
+    margin: 0 0 0 15px;
+    padding: 0;
+  
   }
   .column div span {
     position: absolute;
     bottom: -20px;
     left: 0;
-    z-index: -1;
+    z-index: 2;
     display: block;
     width: 300px;
     margin: 0;
@@ -243,9 +250,10 @@ body {
     width: 300px;
     height: 200px;
     margin: 0;
-    padding: 0;
+    padding: 60px 10px;
     background: #fff;
     overflow: hidden;
+    align-items: center;
   }
   figure:hover + span {
     bottom: -36px;
