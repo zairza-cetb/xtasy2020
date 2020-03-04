@@ -51,7 +51,7 @@ Vue.component('card', {
     },
     cardBgImage() {
       return {
-        backgroundImage: `url(${this.dataImage})` };
+        backgroundImage: `url(${this.dataImage}), url(/images/xtasy.jpg)` };
 
     } },
 
