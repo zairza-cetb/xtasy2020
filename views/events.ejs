@@ -7,7 +7,8 @@
 		<link rel="shortcut icon" href="favicon.ico">
         <link rel="stylesheet" type="text/css" href="stylesheets/base.css"/>
 		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    </head>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	</head>
     
 	<body>
 		<%- include('partials/modal') %>
@@ -28,5 +29,15 @@
 		</div>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
 		<script src="js/mobile.js"></script>
+		<script src="js/sweet.js"></script>
+		<% if(message) { %>
+			<script>
+			  let message = "<%= message %>";
+			  Toast.fire({
+				  position: 'top',
+				title: message
+			  });
+			</script>
+		  <% } %>
 	</body>
 </html>

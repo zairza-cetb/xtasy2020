@@ -15,7 +15,6 @@ $(document).ready(function() {
       let rule_link = $(currentItem).attr('data-rule_link');
       let form_link = $(currentItem).attr('data-form_link');
       $("#mod__form_desc").hide();
-      
 
       $("#mod__cover").attr("src", "/images/xtasy.jpg");
 
