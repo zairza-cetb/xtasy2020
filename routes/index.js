@@ -73,7 +73,7 @@ router.get('/events', function (req, res, next) {
 	if (req.query.logoutSuccess == "1"){
 		message = "Successfully logged you out";
 	}
-	res.render('events', { message: message , evjson: event_json });
+	res.render('events', { message: message , evjson: events_json });
 });
 
 // GET Sponsers Page
