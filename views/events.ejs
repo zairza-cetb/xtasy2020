@@ -21,7 +21,7 @@
         </div>
 		<div id="app" class="container">
 			<% for(var i=1;i<41;i++) { %>
-				<card data-image="/images/eventPosters/<%= i %>.jpg" data-cover="/images/eventPosters/<%= i %>.jpg" data-title='<%= evjson[i]["event"] %>' data-desc='<%= evjson[i]["desc"] %>' data-form_link="<%= evjson[i]['form_link']%>" data-rule_link="<%= evjson[i]['rule_link'] %>" data-venue="<%= evjson[i]['venue'] %>" data-date_time="<%= evjson[i]['date_time'] %>" class="evbtn">
+				<card data-image="/images/eventPosters/<%= i %>.jpg" data-cover="/images/eventPosters/<%= i %>.jpg" data-title='<%= evjson[i]["event"] %>' data-desc='<%= evjson[i]["desc"] %>' data-form_link="<%= evjson[i]['form_link']%>"  data-venue="<%= evjson[i]['venue'] %>" data-date_time="<%= evjson[i]['date_time'] %>" class="evbtn">
 					<h1 slot="header" id="<%= i %>" class="card__title"><%= evjson[i]["event"] %></h1>
 					<p slot="content" class="card__desc" ><%= evjson[i]["desc"].substring(0, 50) %>...</p>
 				</card>
