@@ -3,58 +3,60 @@ $(document).ready(function() {
 
   $(".evbtn").click(function(event) {
     window.currentItem = $(event.target);
-    // console.log("clicked", currentItem);
+    console.log("clicked", currentItem);
     if (!$(mod).hasClass("mod--show")) {
-      let eventID = $(currentItem).attr("data-id")
+      let eventID = $(currentItem).attr("id")
       mod.eventID = eventID;
-      let coverURL = $(currentItem).attr("data-image")
+      let coverURL = $(currentItem).attr("data-cover")
       let title = $(currentItem).attr("data-title");
       let desc = $(currentItem).attr('data-desc');
       let date_time = $(currentItem).attr('data-date_time');
       let venue = $(currentItem).attr('data-venue');
       let rule_link = $(currentItem).attr('data-rule_link');
       let form_link = $(currentItem).attr('data-form_link');
+      console.log(title, desc, coverURL, 'fuck');
       $("#mod__form_desc").hide();
 
-      $("#mod__cover").attr("src", "/images/xtasy.jpg");
+      $("#mod__cover").attr("src", coverURL);
 
       // Check if the user is already registered for the event
       // and set the function of the button as required
-      fetch(`/images/xtasy.jpg`).then(function(res) {
-        if (res.ok) {
-        return res.text();
-        } else {
-          return "E";
-        }
-      }).then(function(message) {
-        let buttonText;
-        if (message == "T") {
+      // fetch(`/images/xtasy.jpg`).then(function(res) {
+      //   // if (res.ok) {
+      //   // return res.text();
+      //   // } else {
+      //   //   return "E";
+      //   // }
+      //   return "T "
+      // }).then(function(message) {
+      //   let buttonText;
+      //   if (message == "T") {
 
-          // Make the button into a Unregister button
-          buttonText = "Unregister";
-          $("#regbtn")
-            .removeClass("btn-success")
-            .addClass("btn-danger")
-            .text(buttonText)
-            .removeClass("hide");
-            if(form_link === "#"){
-              $("#mod__form_desc").hide();
-            }else{
-              $("#mod__form_desc").show();
-            }
+      //     // Make the button into a Unregister button
+      //     buttonText = "Unregister";
+      //     $("#regbtn")
+      //       .removeClass("btn-success")
+      //       .addClass("btn-danger")
+      //       .text(buttonText)
+      //       .removeClass("hide");
+      //       if(form_link === "#"){
+      //         $("#mod__form_desc").hide();
+      //       }else{
+      //         $("#mod__form_desc").show();
+      //       }
          
-        } else {
+      //   } else {
 
-          // Make the button into a Register button
-          buttonText = "Register";
-          $("#regbtn")
-            .removeClass("btn-danger")
-            .addClass("btn-success")
-            .text(buttonText)
-            .removeClass("hide");
-            $("#mod__form_desc").hide();
-        }
-      });
+      //     // Make the button into a Register button
+      //     buttonText = "Register";
+      //     $("#regbtn")
+      //       .removeClass("btn-danger")
+      //       .addClass("btn-success")
+      //       .text(buttonText)
+      //       .removeClass("hide");
+      //       $("#mod__form_desc").hide();
+      //   }
+      // });
 
 
       // Add a cover image, title and description to the modal
