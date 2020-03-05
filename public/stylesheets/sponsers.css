@@ -303,6 +303,10 @@ body {
     }
   }
 
+  .logo{
+    height: 150px;
+    width: 200px;
+  }
   
 .homelogo{
   float: left;
