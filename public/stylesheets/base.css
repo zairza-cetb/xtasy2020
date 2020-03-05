@@ -181,3 +181,7 @@ span.right {
   font-weight: 700;
   text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
 }
+
+.card-bg {
+  background-image: url('/images/xtasy.jpg');
+}
