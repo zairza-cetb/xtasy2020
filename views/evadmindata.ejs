@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Event Table</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        .Table {
+          border-collapse: collapse;
+          margin-left: 150px;
+          width: 80%;
+          border: 1px solid #ddd;
+          font-size: 18px;
+        }
+        
+        .Table th, .Table td {
+          text-align: center;
+          padding: 12px;
+        }
+        
+        .Table tr {
+          border-bottom: 1px solid #ddd;
+        }
+        
+        .Table tr.header, .Table tr:hover {
+          background-color: #f1f1f1;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .Table{
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+        </style>
+</head>
+<body>
+    <script>
+        let value = "<%= value %>";
+    </script>
+    <h1 style="text-align: center;">Participants of <%= evjson[value]["event"] %></h1>
+    <table border="1" class="Table">
+        <% let i=0; %>
+            <tr class="header">
+                <th>Sl No.</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Phone No.</th>
+                <th>College</th>
+            </tr>
+            
+        <% data.forEach(function(d) { %>
+        <% d.events.forEach(function(ev) { %>
+            <% if(ev == value) { %>     
+                <tr class="header">
+                    <% i++;%>
+                    <td><%= i %></td>
+                    <td><%= d.name %></td>
+                    <td><%= d.username %></td>
+                    <td><%= d.gender %></td>
+                    <td><%= d.phone %></td>
+                    <td><%= d.college %></td>
+                </tr>
+                <% } %>
+            <% }); %>
+          <% }); %>
+    </table>
+
+</body>
+</html>

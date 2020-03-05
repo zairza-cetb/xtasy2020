@@ -18,10 +18,27 @@ router.get('/', function (req, res, next) {
 	}
     res.render('index', {
 		message,
-    registered,
-    title: 'Xtasy'
+    	registered,
+    	title: 'Xtasy'
 	});
-  // res.render('index', { title: 'Xstasy' });
+});
+
+
+router.get("/coordinator",function(req,res,next) {
+	User.find({}, (err, data) => {
+		if (err) console.log(err);
+		else
+		  res.render("enter", { data: data, evjson: events_json });
+		});
+});
+
+router.post('/status', (req, res) => {
+	var msg = req.body.id;
+	User.findOne({ uid: msg }, (err, status) => {
+		if(err) console.log(err);
+		else
+			res.render('status', { status: status, evjson: events_json });
+	});
 });
 
 // GET register page
@@ -45,22 +62,29 @@ router.get("/resetPassword", function (req, res, next) {
 });
 
 /*GET admin page*/
-router.get('/admin', (req, res) => {
+router.get('/eventregistration', (req, res) => {
   res.render('adminlog');
 });
 
 /* POST admin page. */
-router.post("/admin", (req, res) => {
+router.post("/centralregistration", (req, res) => {
 	var username = req.body.username;
 	var password = req.body.password;
 	if(username.hashCode() == -709387849 && password.hashCode() == 1789464955){
 	  User.find({}, (err, data) => {
       if (err) console.log(err);
       else
-        res.render("admin", { data: data, evjson: events_json });
+	  	res.render("admin", { data: data, evjson: events_json });
       });
-	} else {
-	  res.redirect("/admin");
+	} else if(username.hashCode() == -1965062827 && password.hashCode() == 1750512007){
+		User.find({}, (err, data) => {
+		if 
+			(err) console.log(err);
+		else
+			res.render("centralregistration", { data: data, evjson: events_json });
+		});
+	  } else {
+	  res.redirect("/eventregistration");
 	}
 });
 
@@ -87,6 +111,22 @@ router.get('/stars', function (req, res, next) {
 // GET Gallery Page
 router.get('/gallery', function (req, res, next) {
   res.render('gallery')
+});
+
+router.get("/evtable", (req, res) => {
+	User.find({}, (err, data) => {
+		if(err) console.log(err);
+		else
+		  res.render('evdata', { data: data, value: req.query.value, evjson: events_json });
+	});
+});
+
+router.get("/evadmintable", (req, res) => {
+	User.find({}, (err, data) => {
+		if(err) console.log(err);
+		else
+		  res.render('evadmindata', { data: data, value: req.query.value, evjson: events_json });
+	});
 });
 
 /* Hash function */
