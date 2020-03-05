@@ -3,22 +3,22 @@
         "event": "Sinfonietta",
         "desc": "Sinfonietta is a solo singing competition for all the classical and western singers out there to show their singing talent to the world by competing in a fair musical fight.",
         "cat":"Flagship-ARPEGGIO",
-        "form_link":"",
+        "form_link":"https://docs.google.com/forms/d/e/1FAIpQLSc8p9bquZTksFulrz8khd5qslO8KwLwqMf7pksn0OAjfwPrzw/viewform",
         "doc_link":"",
         "heading":"Sinfonietta",
         "small_desc":"  ",
-        "date_time":"",
-        "venue":""
+        "date_time":"7th March,2020",
+        "venue":"A-201, CET-B"
     },
     "2": {
         "event": "Maestoso",
         "desc": "One of the oldest War Of Bands competition of the state is back again! This time even bigger and better.Let the majestic performances and overdriven beats throttle spirits and make us all reach Hotel California. This March, we give to you the platform for the exposure of your musical talent. Showcase your skills and reserve a place for yourself on the Stairway To Heaven or Highway To Hell.",
         "cat":"Flagship-ARPEGGIO",
-        "form_link":"",
+        "form_link":"https://docs.google.com/forms/d/e/1FAIpQLSf6gHlBOw9lgVYOwCZBC1aqrm1RXQv9sbFBnCiUx3sj1GRwAQ/viewform",
         "doc_link":"",
         "heading":"Maestoso",
         "small_desc":"",
-        "date_time":"",
+        "date_time":"12th March,2020",
         "venue":""
     },
     "3": {
@@ -117,8 +117,8 @@
         "doc_link":"",
         "heading":"Burnout",
         "small_desc":"  ",
-        "date_time":"11th March,2020",
-        "venue":""
+        "date_time":"11th March,2020 4PM onwards",
+        "venue":"BasketBall Court, CET-B"
     },
     "12": {
         "event": "Udaan (Showcase)",
@@ -177,7 +177,7 @@
     },
     "17": {
         "event": "Dancing Feet",
-        "desc":"It's been more than 10 years that our college is having this tradition of calling young solo stars to compete within themselves.We have this huge participation in duet category as well. ",
+        "desc":"It's been more than 10 years that our college is having this tradition of calling young solo stars to compete within themselves.We have this huge participation in duet category as well.",
         "cat":"Flagship-TDA",
         "form_link":"",
         "doc_link":"",
@@ -185,5 +185,258 @@
         "small_desc":"Solo & Duet Dance Competition",
         "date_time":"14th March,2020",
         "venue":""
+    },
+    "18": {
+        "event": "Goonj",
+        "desc":"Open mic has been a very progressive event for thoughts and revolutionary ideas. Poetry, literature and romance have been the catalyst factors of open mic. A hearty opportunity to budding writers and thinkers, we welcome you to be a part of this event. You are welcome to write any piece of poem, comedy and satires. This is a completely liberal platform for an all round development of talent and word power. Grace us with your presence and talent.",
+        "cat":"",
+        "form_link":"https://docs.google.com/forms/d/e/1FAIpQLSegplj1E1ty3Qgb4TNizeh9gJsh6ini-XsgxjbIoXAgR8_piw/viewform",
+        "doc_link":"",
+        "heading":"Goonj",
+        "small_desc":"The open mic",
+        "date_time":"12th March,2020",
+        "venue":"SAC Area, CET-B"
+    },
+    "19": {
+        "event": " XPERION",
+        "desc":"From the Bunny hopping in Mirage to the gun shots at Pochinki, gaming has always been a source of recreation. Are you ready to rumble? XTACY XPERION brings you the opportunity to showcase your gaming skills and become the champion.The most popular games like FIFA, CS:GO and PUBG will test your coordination with squadmate and gun skills at best! The gamer 'you' has been hiding in rooms for long. Now's its time to compete for the best. A real gamer is known by his play even though it doesn't pay.",
+        "cat":"",
+        "form_link":"https://docs.google.com/document/d/1Uumx6nQ3I6pZkn9c3hdHqy4GIVYRiMXOw9uJ0GgO-IA/edit",
+        "doc_link":"",
+        "heading":" XPERION",
+        "small_desc":"Gaming Tournament",
+        "date_time":"12-13-14th March,2020",
+        "venue":"CET-B"
+    },
+    "20": {
+        "event": "Read the Lips",
+        "desc":"Come join us in our fun and frolic 'read the lips' game and test your compatibility and guessing skills. The game is really simple. There are two participants with one of them wearing headphones playing loud music to cut off the noise. The other one has to speak something given and winning condition is the player with the headphones has to guess what the other one is saying. Sounds easy and fun right? We cordially invite you to be a part of this enjoyable event.",
+        "cat":"",
+        "form_link":"",
+        "doc_link":"",
+        "heading":"Read the Lips",
+        "small_desc":"The open mic",
+        "date_time":"14th March,2020",
+        "venue":"CET-B"
+    },
+    "21": {
+        "event": "Aandhadhun ",
+        "desc":"So....Are you a good listener? You think...you and your partner have a good compatibility? Come and Try the game Aandhadhun with your partner....Its really simple, all you have to do is hear your partner instructing you the direction towards the target... You have to hit the target with  as much least time you can take!  So isn't it easy? Come And Try Your Luck... Winning team will be getting a gift!",
+        "cat":"",
+        "form_link":"",
+        "doc_link":"",
+        "heading":"Aandhadhun ",
+        "small_desc":"",
+        "date_time":"13th March,2020",
+        "venue":"CET-B"
+    },
+    "22": {
+        "event": "Gully Cricket",
+        "desc":"All the Cricket Enthusiasts out there!!! XTASY 2020 presents you our very own 'Gully Cricket' in a different form with various tints added to it.This is the game where decisions are made in the name of Gods and played with the rules beyond the context of cricket rulebooks.So kit yourself up to enthrall Dhoni's immaculate batting and Jonty's mesmerizing fielding performed by our young talents.Entry Fees- Rs.250 /- Only.Prizes- Worth 5000",
+        "cat":"",
+        "form_link":"https://docs.google.com/forms/d/e/1FAIpQLSfpb7dLexLejUsDbeC9a4MmZYUQGyXH87RXAa619ogEYHSiXA/viewform",
+        "doc_link":"",
+        "heading":"Gully Cricket",
+        "small_desc":"",
+        "date_time":"11-12-13th March,2020",
+        "venue":"CET-B"
+    },
+    "23": {
+        "event": "SHUTTERUP",
+        "desc":"CET Photofactory brings you the very first pre-event SHUTTERUP of XTASY-2020. Spot us near the canteen area from 6th March,2020. Spare a mintue or two. And get officially framed and DPed by us. Do not miss it.",
+        "cat":"",
+        "form_link":"",
+        "doc_link":"",
+        "heading":"SHUTTERUP",
+        "small_desc":"",
+        "date_time":"6th March,2020 onwards",
+        "venue":"CET-B"
+    },
+    "24": {
+        "event": "IPL AUCTION",
+        "desc":"How does it feel when KKR gets Dinesh Kartik or when RCB leads the auction rates soaring high for Chris Gayle?So come and live in as a copious bidder bidding for the best to emasculate an army of top notch players. IPL AUCTION, the legendary bidding event of XTASY invites you all in to participate.",
+        "cat":"",
+        "form_link":"https://docs.google.com/forms/d/e/1FAIpQLScigeqGaBdNhVPlQzCE6GrI5lhy_0dPpoAIQspY0I6tTGi8-w/viewform",
+        "doc_link":"",
+        "heading":"IPL AUCTION",
+        "small_desc":"",
+        "date_time":"13th March,2020",
+        "venue":"CET-B"
+    },
+    "25": {
+        "event": " BALLOON  WALK",
+        "desc":"Enjoyment, amusement, or light-hearted pleasure can give you happiness.When it comes to The most awaited fest of CET XTASY2020 Fun plays an important role.Xtasy2020 brings you the opportunity to back to the childhood and feel the happiness with balloons in the form of a fun event BALLOON  WALK",
+        "cat":"",
+        "form_link":"",
+        "doc_link":"",
+        "heading":" BALLOON  WALK",
+        "small_desc":"",
+        "date_time":"13th March,2020 10AM onwards",
+        "venue":"SAC Area, CET-B"
+    },
+    "26": {
+        "event": "MUSICAL CHAIR",
+        "desc":"Come join us for the fun event 'MUSICAL CHAIR'.The game is really simple as it sounds.Musical chairs is a game of elimination involving players, chairs, and music, with one fewer chair than players. When the music stops whichever player fails to sit on a chair is eliminated, with a chair then being removed and the process repeated until only one player remains.It will involve 15 participants in each round and the winner will be awarded with  exciting prizes.",
+        "cat":"",
+        "form_link":"",
+        "doc_link":"",
+        "heading":"MUSICAL CHAIR",
+        "small_desc":"",
+        "date_time":"14th March,2020",
+        "venue":"SAC Area, CET-B"
+    },
+    "27": {
+        "event": "TWISTER",
+        "desc":"The state of being happy starts with fun. To show case your physical fitness and body movement though fun team Xtasy brings a very amazing fun event TWISTER.Where you have to twist your body and  show how fit are you 🏋‍♀Guys are you excited for this event.",
+        "cat":"",
+        "form_link":"",
+        "doc_link":"",
+        "heading":"TWISTER",
+        "small_desc":"",
+        "date_time":"12-13-14th March,2020",
+        "venue":"SAC Area, CET-B"
+    },
+    "28": {
+        "event": "FUTSAL",
+        "desc":"Football  Enthusiasts?? Couldn't take part in Engineer's Cup ??Worry no more fellas !Xtasy presents you the premiere sports event: FUTSAL 2020.Enthrall the audience with some mad skills.Hit up the link and register for the event",
+        "cat":"",
+        "form_link":"https://docs.google.com/forms/d/e/1FAIpQLSepEZw1CtHi41XSytkgebb8ofhQl9TZPZ5KJep1t3m-CY6QcQ/viewform",
+        "doc_link":"",
+        "heading":"FUTSAL",
+        "small_desc":"",
+        "date_time":"12-13-14th March,2020",
+        "venue":"CET-B"
+    },
+    "29": {
+        "event": "Count the Basket",
+        "desc":"Count the basket-At a point of time - 10 participants will be allowed to participate and each participant will be given 5 different positions to shoot for first round.Out of them 5 participants will get qualified basing upon number of baskets to second round. Those 5 participants will be given 3 more positions each to shoot . The highest scorer becomes the winner. Come and be the black mamba of basketball floor and count your basket .Winner gets exciting prizes.",
+        "cat":"",
+        "form_link":"",
+        "doc_link":"",
+        "heading":"Count the Basket",
+        "small_desc":"",
+        "date_time":"12th March,2020",
+        "venue":"CET-B"
+    },
+    "30": {
+        "event": "Lets Play Darts",
+        "desc":"If you aim at nothing you'll hit nothing every time.Xtasy's good mood is sponsored by darts!!This Xtasy test your skills get your hands on the darts and prove that in the long run you only hit what you aim at.Try to hit the bullseye!!Description:A player will be given 3darts and he/she shall try to hit the bullseye!So think before you throw it!!",
+        "cat":"",
+        "form_link":"",
+        "doc_link":"",
+        "heading":"Lets Play Darts",
+        "small_desc":"",
+        "date_time":"12-13-14th March,2020",
+        "venue":"CET-B"
+    },
+    "31": {
+        "event": "Fish Bowl",
+        "desc":"Howdy!Xtasy 2020,which signifies 'End of an Era', here we invite you to live the American Dream, which is making money and a high School party.We have a fun event for you which includes both. Enjoy this fun party and the best thing is, Make some money!",
+        "cat":"",
+        "form_link":"",
+        "doc_link":"",
+        "heading":"Fish Bowl",
+        "small_desc":"",
+        "date_time":"12-13-14th March,2020",
+        "venue":"CET-B"
+    },
+    "32": {
+        "event": "PRICE IT RIGHT",
+        "desc":"So how good are you at guessing? Is your sense sharp enough to know the value of goods and commodities ?Well if you are someone who has skills to approximate the prices , then XTASY-2020 presents you with 'PRICE IT RIGHT.From Queen Elizabeth's crown to Michel Jackson's shoes , if your price pitch is right the prize is all yours.Thus this event lets you unravel your concealed Entrepreneurial skills by guessing the worth of a particular item .So choose your partner wisely and form a team of 2 and come join us with a bang and take exciting prizes with you",
+        "cat":"",
+        "form_link":"",
+        "doc_link":"",
+        "heading":"PRICE IT RIGHT",
+        "small_desc":"",
+        "date_time":"13th March,2020",
+        "venue":"CET-B"
+    },
+    "33": {
+        "event": "THE CARD PYRAMID",
+        "desc":"Hola everyone!! Here comes the game that tests your patience out. Presenting you THE CARD PYRAMID.",
+        "cat":"",
+        "form_link":"",
+        "doc_link":"",
+        "heading":"THE CARD PYRAMID",
+        "small_desc":"",
+        "date_time":"12th March,2020 10AM onwards",
+        "venue":"SAC Area, CET-B"
+    },
+    "34": {
+        "event": "KNOCKDOWN",
+        "desc":"Welcome to 'KNOCKDOWN' Don't just keep knocking on my door.Just knock it down and enter.For I'm a heavy sleeper.If you ever knock me downYou better kill meBecause when I get up.You're so dead",
+        "cat":"",
+        "form_link":"",
+        "doc_link":"",
+        "heading":"KNOCKDOWN",
+        "small_desc":"",
+        "date_time":"12-14th March,2020 11AM onwards",
+        "venue":"SAC Area, CET-B"
+    },
+    "35": {
+        "event": " CARROM",
+        "desc":"A game of passion, chivalry and companionship. A game with one queen to conquer. A game to prove your feat.So gear yourself as Xtasy 2020 brings you the ultimate league for champions, CARROM. Get ready to outshine!",
+        "cat":"",
+        "form_link":"https://docs.google.com/forms/d/e/1FAIpQLSdYlMiTshHsQNbjMvhf-GHkyYvIz0fs54huFPstJqO6GA8nQg/viewform?fbclid=IwAR0lSzi7evm-Bhf6y14CYY3eh_TTo2fJwqV_Lk-ef8fz0wKEgku97chgkIM",
+        "doc_link":"",
+        "heading":" CARROM",
+        "small_desc":"",
+        "date_time":"11-12-13th March,2020",
+        "venue":"Badminton Court, CET-B"
+    },
+    "36": {
+        "event": "Snake and Ladder",
+        "desc":"Cheer up guys !!!!!Welcome to Snake and ladder...",
+        "cat":"",
+        "form_link":"",
+        "doc_link":"",
+        "heading":"Snake and Ladder",
+        "small_desc":"",
+        "date_time":"12-13-14th March,2020",
+        "venue":"CET-B"
+    },
+    "37": {
+        "event": "Engineer's MASTERCHEF",
+        "desc":"Come and try your hands on this cooking extravaganza 'Engineer's MASTERCHEF' .Cook exciting dishes to show your skills at MASTERCHEF with a new and innovative presentation .Let the judges go crazy on your talents and make a taste explosion.",
+        "cat":"",
+        "form_link":"https://docs.google.com/forms/d/e/1FAIpQLSd8ibk_lA4vxg-cFuC7lKUzb86f-CAUXicnhshKaVr1o5YxtQ/viewform?fbclid=IwAR1dkC7r80wbllF5uWtYoVCcbuhAqcTSySnNgKWFy3f8F6P2sJLJ9Kim8Kk",
+        "doc_link":"",
+        "heading":"Engineer's MASTERCHEF",
+        "small_desc":"",
+        "date_time":"14th March,2020",
+        "venue":"CET-B"
+    },
+    "38": {
+        "event": "Tug of War",
+        "desc":"Hey fellas,Let's meet in the venue with full of enthusiasm and vigor for a test of strength in pulling ropes.",
+        "cat":"",
+        "form_link":"https://docs.google.com/forms/d/1GveNmnqk-6n1HxlHzk2MqWX3eePftoqO_WR_Exlzj5Q/viewform?fbclid=IwAR2NoiM4AOPbIgVsOWjerOHRlolR1_gV7FnBLU0xIh2qtfd4XUo8IT8YY-w&edit_requested=true",
+        "doc_link":"",
+        "heading":"Tug of War",
+        "small_desc":"",
+        "date_time":"12-13th March,2020",
+        "venue":"CET-B"
+    },
+    "39": {
+        "event": "ZUMBA WORKSHOP",
+        "desc":"The rule of Zumba?Shake it till you make it! Don't know a move? Even better!For the first time, 'The Dance Authority' presents a fresh and energetic 'ZUMBA WORKSHOP' with Zin Binod Nayak.TDA welcomes and invites all for a party to give your calories one last dance. Let's trip and twirl to fitness!",
+        "cat":"",
+        "form_link":"https://docs.google.com/forms/d/e/1FAIpQLSdPH8VE8EVGPg5WGRI_b0YOKz41PhUPByeAaNZZa6VVSulCVA/viewform",
+        "doc_link":"",
+        "heading":"ZUMBA WORKSHOP",
+        "small_desc":"",
+        "date_time":"13th March,2020 10:30AM-12PM",
+        "venue":"A-201, CET-B"
+    },
+    "40": {
+        "event": "ROADIES",
+        "desc":"Helloooooooo CET!!!Are you ready to rule the world? Do you have what it takes to put everything at stake?Xtasy dares you to come and participate in the ultimate battle for daredevils, ROADIES.",
+        "cat":"",
+        "form_link":"https://docs.google.com/forms/d/e/1FAIpQLSeYdgmRKNwT4Cuc9OBF2wR3fjMGjCSqIX37t8lOjrvbDsXB5Q/viewform",
+        "doc_link":"",
+        "heading":"ROADIES",
+        "small_desc":"",
+        "date_time":"11-14th March,2020",
+        "venue":"CET-B"
     }
 }
