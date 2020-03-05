@@ -3,11 +3,19 @@ var express = require('express'),
     passport = require('passport'),
     localStrategy = require('passport-local'),
     User = require('../model/users'),
+    nodemailer =require("nodemailer"),
+    ejs = require('ejs'),
+    path = require("path"),
     router = express.Router();
 
 mongoose.connect("mongodb+srv://zairzacetb:arpanet123@cluster0-coz0t.mongodb.net/test", {
     useNewUrlParser: true
 });
+
+// Utility to check if a string is a valid event ID
+function isValidEventID(value) {
+  return (/^\d+$/.test(value)) && (event_json.hasOwnProperty(value));
+}
 
 router.use(require("express-session")({
     secret: "Secrets shall not be disclosed",
@@ -25,6 +33,17 @@ router.use(passport.initialize());
 router.use(passport.session());
 
 ///////////////////////////////////////////////////////////
+
+const transporter = nodemailer.createTransport({
+  service:"Gmail",
+  auth:{
+  type:"OAuth2",
+    user:"prateek.mohanty2599@gmail.com",
+    clientId: "714535567108-ic2r9blns2uirlr64lrr7tr4022mq8mo.apps.googleusercontent.com",
+    clientSecret: "G0McjpXhqA8bXVXwzA6cFpX2",
+    refreshToken: "1//042was1i6eFkeCgYIARAAGAQSNwF-L9IrY4u2XRqbxrjWKxorHuzjwnFOSsu6ymB5ydJiWG88NsWd6ve0fm0eCog3JKn-m7BLDco"
+  }
+});
 
 router.get('/getpaidstatus/:uid', (req, res, next) => {
 var res_data = {};
@@ -77,6 +96,31 @@ router.post('/register', (req, res) => {
         if(err) return res.redirect(`/register?err=${err.message}`);
                 
         passport.authenticate("local")(req, res, () => {
+          ejs.renderFile(__dirname+"/mailTemplate.ejs", { name: req.user.name, uid: req.user.uid }, (err, data) => {
+            if (err) {
+              console.log(err)
+            }
+            // res.locals.message = "Registered successfully";
+            transporter.sendMail({
+              from: 'Xtasy 2020 Team, CETB',
+              to: req.user.username,
+              subject: 'Xtasy 2020 | Registration Successful',
+              attachments: [
+                {
+                  filename: "xtasy.jpg",
+                  path: path.join(__dirname, "..", "/public/images/xtasy.jpg"),
+                  cid:"logo"
+                }
+              ],
+              html: data
+            }, function(error, info){
+              if (error) {
+                console.log("mail error",error);
+              } else {
+                console.log('Email sent: ' + info.response);
+              }
+            });
+          })
             if (req.query.ref) {
                 res.redirect(`${req.query.ref}?registerSuccess=1`);
               } else {

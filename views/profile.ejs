@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PROFILE</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/profile.css" />
+  </head>
+  <body >
+    <div class="title">
+      <span class="top right"></span>
+      <span class="top left"></span>
+      <span class="bottom right"></span>
+      <span class="bottom left"></span>
+    </div>
+    <div class="card">
+        <img src="images/pp.jpg" alt="John" style="width:100%" height="260px">
+        <h2>UID: <%= data.uid %></h2>
+        <h1><%= data.name %></h1>
+        <div class="cont">
+          <p>Email:<%= data.username %></p>
+          <p>Gender:<%= data.gender %></p>
+          <p>College:<%= data.college %></p>
+          <p>Phone:<%= data.phone %></p>
+          <p>Payment status:<%= data.paidstatus %></p>
+        </div>
+      </div>      
+  </body>
+</html>

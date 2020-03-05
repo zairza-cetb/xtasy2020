@@ -188,3 +188,6 @@ span.right {
   margin-left: 20px; 
   color: black;
 }   
+.card-bg {
+  background-image: url('/images/xtasy.jpg');
+}
