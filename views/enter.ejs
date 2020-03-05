@@ -154,7 +154,7 @@
         <% data.forEach(function(d) { %> <% d.events.forEach(function(ev) { %>
         <% if(ev == i) { %> <% m++; %> <% } %> <% }); %> <% }); %>
         <td><%= m %></td>
-        <td><a href="/evadmintable?value=<%= i %>">Table...</a></td>
+        <td><a href="/evtable?value=<%= i %>">Table...</a></td>
       </tr>
       <% i++; } %>
     </table>

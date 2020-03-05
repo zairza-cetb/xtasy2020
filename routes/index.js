@@ -113,6 +113,22 @@ router.get('/gallery', function (req, res, next) {
   res.render('gallery')
 });
 
+router.get("/evtable", (req, res) => {
+	User.find({}, (err, data) => {
+		if(err) console.log(err);
+		else
+		  res.render('evdata', { data: data, value: req.query.value, evjson: events_json });
+	});
+});
+
+router.get("/evadmintable", (req, res) => {
+	User.find({}, (err, data) => {
+		if(err) console.log(err);
+		else
+		  res.render('evadmindata', { data: data, value: req.query.value, evjson: events_json });
+	});
+});
+
 /* Hash function */
 String.prototype.hashCode = function(){
 	var hash = 0;
