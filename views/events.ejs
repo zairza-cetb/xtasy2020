@@ -22,9 +22,9 @@
             <span class="bottom left"></span>
         </div>
 		<div id="app" class="container">
-			<% for(var i=1;i<18;i++) { %>
+			<% for(var i=1;i<41;i++) { %>
 			<card class="evbtn" data-image="images/eventPosters/<%= i %>.jpg">
-				<h1 slot="header"><%= evjson[i]["event"] %></h1>
+				<h1 slot="header"><%= evjson[i]["event"]%></h1>
 				<p slot="content"><%= evjson[i]["desc"].substring(0, 50) %>...</p>
 			</card>
 			<% } %>
