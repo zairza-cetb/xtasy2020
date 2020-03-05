@@ -1265,9 +1265,14 @@ h3 {
   font-weight: 200;
 }
 
+.col-xs-12{
+  margin-top: 50px;
+}
+
 .homelogo{
-  float: left;
-  margin-top: -20px;
-  margin-left: 20px; 
-  color: tomato;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 5px 5px;
+  color: white;
 }

@@ -1,5 +1,8 @@
 body {
-    background-color: #eee;
+  background: #757F9A;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   }
   .hello {
     opacity: 1 !important;
@@ -193,8 +196,9 @@ body {
   }
 
   .homelogo{
-    float: left;
-    margin-top: -20px;
-    margin-left: 20px; 
-    color: tomato;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 5px 5px;
+    color:black;
   }
