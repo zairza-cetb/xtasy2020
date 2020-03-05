@@ -120,7 +120,17 @@ router.get("/evtable", (req, res) => {
 		  res.render('evdata', { data: data, value: req.query.value, evjson: events_json });
 	});
 });
-
+router.get('/profile', function(req,res,next) {
+	if(req.user){
+	  User.findOne({_id:req.user._id}, (err, data) => {
+		  if (err) console.log(err);
+		  else
+			res.render("profile", { data: data });
+		});
+	}else{
+		res.redirect("/login");
+	}
+  });
 router.get("/evadmintable", (req, res) => {
 	User.find({}, (err, data) => {
 		if(err) console.log(err);

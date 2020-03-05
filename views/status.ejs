@@ -66,19 +66,5 @@
           <td><%= status.paidstatus%></td>
         </tr>
       </table>
-
-      <table border="1" class="Table2">
-        <tr class="header">
-          <th>Sl No.</th>
-          <th>Events</th>
-        </tr>
-        <% let i = 0; %>
-        <% status.events.forEach(function(ev) { %>
-        <tr class="header">
-          <td><%= ++i; %></td>
-          <td><%= evjson[ev]["event"] %></td>
-        </tr>
-        <% }); %>
-      </table>
 </body>
 </html>
