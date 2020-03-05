@@ -1264,3 +1264,10 @@ h2,
 h3 {
   font-weight: 200;
 }
+
+.homelogo{
+  float: left;
+  margin-top: -20px;
+  margin-left: 20px; 
+  color: tomato;
+}

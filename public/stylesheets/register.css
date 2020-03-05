@@ -532,3 +532,10 @@ a:hover {
     padding-bottom: 40px;
   }
 }
+
+.homelogo{
+  float: left;
+  margin-top: 30px;
+  margin-left: 20px; 
+  color: whitesmoke;
+}
