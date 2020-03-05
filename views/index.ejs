@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
   </head>
   <body>
     <%- include('partials/loginbutton') %>
@@ -24,5 +25,27 @@
         <%- include('partials/navbar') %>
       </center>
     </section>
+    <% if(message) { %>
+      <script src="js/sweet.js"></script>
+      <script>
+        let message = "<%= message %>";
+        Toast.fire({
+          title: message
+        });
+      </script>
+    <% } %>
+    <% if(registered) { %>
+      <div class="register">
+        <script>
+          Swal.fire({
+            position: 'top',
+            icon: 'success',
+            title: 'You have successfully registered for Perception 2020.',
+            showConfirmButton: false,
+            timer: 7000
+          })
+          </script>
+        </div>
+      <% } %>
   </body>
 </html>

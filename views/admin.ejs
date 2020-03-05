@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Admin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      #myInput,
+      #myInput2 {
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        width: 800px;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+        /* margin-left: 400px; */
+      }
+      .Table {
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px solid #ddd;
+        font-size: 18px;
+      }
+      .Table2 {
+        border-collapse: collapse;
+        width: 800px;
+        border: 1px solid #ddd;
+        font-size: 18px;
+        /* margin-left: 400px; */
+      }
+      .Table th,
+      .Table td,
+      .Table2 th,
+      .Table2 td {
+        text-align: center;
+        padding: 12px;
+      }
+      .Table tr,
+      .Table2 tr {
+        border-bottom: 1px solid #ddd;
+      }
+      .Table tr.header,
+      .Table tr:hover,
+      .Table2 tr.header,
+      .Table2 tr:hover {
+        background-color: #f1f1f1;
+      }
+      #check {
+        width: 100px;
+        height: 50px;
+        margin: 0 auto;
+        position: relative;
+      }
+      #ch {
+        margin: 0px;
+        width: 100%;
+        height: 50px;
+        cursor: pointer;
+        opacity: 0;
+        position: relative;
+        z-index: 3;
+      }
+      #before {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background-color: red;
+        z-index: 1;
+        border-radius: 50px;
+      }
+      #after {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        width: 34px;
+        height: 34px;
+        background-color: #fff;
+        border-radius: 50%;
+        transition: left 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28),
+          margin-left 0.3s ease, width 0.3s ease, border-radius 0.3s ease;
+        box-shadow: 0px 1px 1px #7d7d7d;
+        z-index: 2;
+      }
+      #ch:active ~ #after {
+        width: 66px;
+        border-radius: 20px;
+      }
+      #ch:checked ~ #after {
+        left: 58px;
+      }
+      #ch:checked:active ~ #after {
+        margin-left: -32px;
+      }
+      #ch:checked ~ #before {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="margin-left: 730px;">Search Table</h1>
+
+    <input
+      type="text"
+      id="myInput"
+      onkeyup="myFunction()"
+      placeholder="Search for events.."
+      title="Type in a name"
+    />
+
+    <table border="1" id="myTable" class="Table2">
+      <% let i=1; %>
+      <tr class="header">
+        <th>Events</th>
+        <th>No. of Participants</th>
+        <th>Data Table</th>
+      </tr>                     
+      <% while(i!=18) { %>
+      <tr class="header">
+        <% var m=0; %>
+        <td><%= evjson[i]["event"] %></td>
+        <% data.forEach(function(d) { %> <% d.events.forEach(function(ev) { %>
+        <% if(ev == i) { %> <% m++; %> <% } %> <% }); %> <% }); %>
+        <td><%= m %></td>
+        <td><a href="/evadmintable?value=<%= i %>">Table...</a></td>
+      </tr>
+      <% i++; } %>
+    </table>
+    <h1 style="text-align: center;">Payment Status</h1>
+    
+        <table border="1" class="Table2">
+          <% let p=0; %> <% data.forEach(function(data){ %> <%  if(data.paidstatus === "paid") p++; }); %>
+          <tr class="header">
+            <th>No. of Students Paid</th>
+            <th><%= p%></th>
+          </tr>
+        </table>
+
+
+    <h1 style="text-align: center;">Main Table</h1>
+
+    <input
+      type="text"
+      id="myInput2"
+      onkeyup="myFunction2()"
+      placeholder="Search for PID "
+      title="Type in a name"
+    />
+
+    <table border="1" id="myTable2" class="Table">
+      <tr class="header">
+        <th>UID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>No.</th>
+        <th>college</th>
+        <th>Events</th>
+        <th>Paid Status</th>
+      </tr>
+      <% let j=0; %> <% data.forEach(function(data){ %> <% j++; %>
+      <tr>
+        <td class="uid"><%= data.uid%></td>
+        <td class="name"><%= data.name %></td>
+        <td><%= data.username%></td>
+        <td><%= data.gender%></td>
+        <td><%= data.phone %></td>
+        <td><%= data.college%></td>
+        <td><%= data.events%></td>
+        <td>
+            <div id="check" style="opacity: 0.1;">
+                <input type="checkbox" disabled id="ch" oninput="togglePaidStatus(this, '<%= data._id %>')" data-id="<%= data._id %>"/>
+                  <div id="before"></div>
+                  <div id="after"></div> 
+              </div>
+        </td>
+      </tr>
+      <% }); %>
+    </table>
+
+    <script>
+      function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+      function myFunction2() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput2");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable2");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByClassName("uid")[0];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+    </script>
+    <script src="/js/admin.js"></script>
+  </body>
+</html>

@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="stylesheets/login.css" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <title>Login</title>
   </head>
   <body>
@@ -30,5 +31,26 @@
         </form>
       </div>
   <script src="js/login.js"></script>
+  
+  <% if(err) { %>
+    <script src="js/sweet.js"></script>
+    <script>
+      let err = "<%= err %>";
+      Toast.fire({
+          icon:"error",
+        title: err
+      });
+    </script>
+  <% } %>
+  <% if(message) { %>
+    <script src="js/sweet.js"></script>
+    <script>
+      let message = "<%= message %>";
+      Toast.fire({
+          icon:"success",
+        title: message
+      });
+    </script>
+  <% } %>
   </body>
 </html>
