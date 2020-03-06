@@ -132,6 +132,7 @@ router.post('/register', (req, res) => {
 });
 
 router.post('/login', function(req, res, next) {
+  console.log("HIIIII");
     passport.authenticate('local', function(err, user, info) {
       if (err) {
          return console.log(err); 
