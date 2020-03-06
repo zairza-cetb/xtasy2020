@@ -43,6 +43,21 @@
 					<% } %>
 				</div>
 			</div>
+			<div id="FunEvents" class="container">
+				<div class="wrap">
+					<h1>Workshop</h1>
+				</div>
+				<div id="app" class="container">
+					<% for(var i=1;i<41;i++) { %>
+						<% if (evjson[i]["cat"] === "Workshop" ){ %>
+							<card data-image="/images/eventPosters/<%= i %>.jpg" data-cover="/images/eventPosters/<%= i %>.jpg" data-title='<%= evjson[i]["event"] %>' data-desc='<%= evjson[i]["desc"] %>' data-form_link="<%= evjson[i]['form_link']%>"  data-venue="<%= evjson[i]['venue'] %>" data-date_time="<%= evjson[i]['date_time'] %>" class="evbtn">
+								<h1 slot="header" id="<%= i %>" class="card__title"><%= evjson[i]["event"] %></h1>
+								<p slot="content" class="card__desc" ><%= evjson[i]["desc"].substring(0, 50) %>...</p>
+							</card>
+						<% } %>	
+					<% } %>
+				</div>
+			</div>
 		</div>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
 		<script src="js/mobile.js"></script>
