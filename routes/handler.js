@@ -38,10 +38,10 @@ const transporter = nodemailer.createTransport({
   service:"Gmail",
   auth:{
   type:"OAuth2",
-    user:"prateek.mohanty2599@gmail.com",
+    user:"xtasy@cet.edu.in",
     clientId: "714535567108-ic2r9blns2uirlr64lrr7tr4022mq8mo.apps.googleusercontent.com",
     clientSecret: "G0McjpXhqA8bXVXwzA6cFpX2",
-    refreshToken: "1//042was1i6eFkeCgYIARAAGAQSNwF-L9IrY4u2XRqbxrjWKxorHuzjwnFOSsu6ymB5ydJiWG88NsWd6ve0fm0eCog3JKn-m7BLDco"
+    refreshToken: "1//045Bwp21sX8s7CgYIARAAGAQSNwF-L9Ira6ArN3KO-0c0ESFKw9Rl_cmg-bftAcgkmDypMXpO01mduoeV958RH9TTsl9gZxijAvE"
   }
 });
 
