@@ -33,6 +33,9 @@
           title: message
         });
       </script>
+      <script>
+        history.pushState(null, null, window.location.pathname);
+      </script>
     <% } %>
     <% if(registered) { %>
       <div class="register">
