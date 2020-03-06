@@ -1,5 +1,5 @@
 body {
-  background: #ECECEC;
+  background: #708090;
   
 }
 .title {
@@ -303,5 +303,15 @@ body {
     }
   }
 
-
+  .logo{
+    height: 150px;
+    width: 200px;
+  }
   
+.homelogo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 5px 5px;
+  color:black;
+}
