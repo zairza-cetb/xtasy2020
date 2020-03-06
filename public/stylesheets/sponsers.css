@@ -106,3 +106,11 @@ body{
   width: 300px;
 }
 }
+
+.homelogo{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 5px 5px;
+  color:black;
+}
