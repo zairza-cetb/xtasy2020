@@ -132,7 +132,7 @@
     "14": {
         "event": "Salsa Workshop",
         "desc":"Salsa Workshops are the main attractions as the crowd actually peets it off really well and a vibe of togetherness can be felt during the workshoop among the students.",
-        "cat":"Fun",
+        "cat":"Workshop",
         "form_link":"#",
         "heading":"Salsa Workshop",
         "small_desc":"  ",
@@ -142,7 +142,7 @@
     "15": {
         "event": "HipHop Workshop",
         "desc":"TDA has managed to provide the students of various colleges a good variety of workshops.This time it is a Hip Hop workshop by one of the renowned dancers Mr.Adarsh Mishra",
-        "cat":"Fun",
+        "cat":"Workshop",
         "form_link":"#",
         "heading":"HipHop Workshop",
         "small_desc":"  ",
@@ -382,7 +382,7 @@
     "39": {
         "event": "ZUMBA WORKSHOP",
         "desc":"The rule of Zumba?Shake it till you make it! Don't know a move? Even better!For the first time, 'The Dance Authority' presents a fresh and energetic 'ZUMBA WORKSHOP' with Zin Binod Nayak.TDA welcomes and invites all for a party to give your calories one last dance. Let's trip and twirl to fitness!",
-        "cat":"Fun",
+        "cat":"Workshop",
         "form_link":"https://docs.google.com/forms/d/e/1FAIpQLSdPH8VE8EVGPg5WGRI_b0YOKz41PhUPByeAaNZZa6VVSulCVA/viewform",
         "heading":"ZUMBA WORKSHOP",
         "small_desc":"",
