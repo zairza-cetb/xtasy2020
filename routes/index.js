@@ -41,6 +41,12 @@ router.post('/status', (req, res) => {
 	});
 });
 
+
+/*GET our-tem page*/
+router.get('/team', (req, res) => {
+	res.render('team');
+  });
+  
 // GET register page
 router.get("/register", function (req, res, next) {
   res.render("register", { err: req.query.err });
