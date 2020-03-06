@@ -22,7 +22,7 @@ $(document).ready(function() {
       $("#mod__desc").text(desc);
       $("#mod__date_time_venue").html("<strong>Slot :</strong> "+date_time+"  <strong>Venue :</strong>" + venue);
       
-      if(form_link.trim() === "#"){
+      if(form_link === "#"){
         $("#mod__form_desc").hide();
       }else{
         $("#mod__form_desc").show();
