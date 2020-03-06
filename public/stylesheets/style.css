@@ -34,6 +34,7 @@ body:after {
   height: 55vh;
   width: 75vw;
 }
+
 @media screen and (max-width: 767px) {
     body {
       background-size: fit;
@@ -48,7 +49,7 @@ body:after {
       height: 30vh;
       width: 70vw;
     }
-    
+
     .title-img {
       height: 24vh;
       width: 80vw;
