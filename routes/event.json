@@ -398,5 +398,25 @@
         "small_desc":"",
         "date_time":"11-14th March,2020",
         "venue":"CET-B"
+    },
+    "41": {
+        "event": "Housie",
+        "desc":"Would anyone like to live your childhood indoor game fun all over again? Xtasy 2020 can bring you a part of it, through our very affable yet Fun game Housie.Come join us to be child again, and grace the occasion with funnier memories and check out your luck to see if you can get any of the top row or middle row or bottom row or full housie  or.... May be all of them!!!!",
+        "cat":"Fun",
+        "form_link":"",
+        "heading":"Housie",
+        "small_desc":"",
+        "date_time":"13th March,2020",
+        "venue":"CET-B"
+    },
+    "42": {
+        "event": "Buzz Off",
+        "desc":"Hello folks!!! This is the time to show the balance between your speed and skill. Are you fast enough to score high? Are you skilled enough to score high? Come and show how fast and how skilled you are? Beat the number of touches against time. All you need to do is move the hook over the zig zag path. When the hook will touch the path the buzzer will buzz. One with minimum number of touches in minimum time will be the winner. Let's see who will be buzzer of the BUZZ OFF. Winning prizes: worth 1k and more",
+        "cat":"Fun",
+        "form_link":"",
+        "heading":"Buzz Off",
+        "small_desc":"",
+        "date_time":"13th March,2020",
+        "venue":"CET-B"
     }
 }

@@ -21,6 +21,11 @@ body {
 
 }
 
+.fa-3x {
+  font-size: 3em;
+  float: left;
+  padding-left: 40px;
+}
 
 h1 {
   font-weight: 700;
@@ -141,4 +146,5 @@ form input:focus {
   margin-top: 30px;
   margin-left: 20px; 
   color: whitesmoke;
+  width: 100%;
 }
