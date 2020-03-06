@@ -24,8 +24,6 @@ body:after {
   height: 70vh;
 }
 .title-img-div {
-  margin-top: 100px;
-  margin-left: 100px;
   height: 60vh;
   width: 80vw;
 }
@@ -44,8 +42,6 @@ body:after {
       height: 50vh;
     }
     .title-img-div {
-      margin-top: 150px;
-      margin-left: 50px;
       height: 30vh;
       width: 70vw;
     }
