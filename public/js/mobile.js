@@ -2,7 +2,7 @@ Vue.config.devtools = true;
 
 Vue.component('card', {
   template: `
-    <div class="card-wrap"
+    <div class="card-wrap evbtn"
       @mousemove="handleMouseMove"
       @mouseenter="handleMouseEnter"
       @mouseleave="handleMouseLeave"
@@ -51,7 +51,7 @@ Vue.component('card', {
     },
     cardBgImage() {
       return {
-        backgroundImage: `url(${this.dataImage})` };
+        backgroundImage: `url(${this.dataImage}), url(/images/xtasy.jpg)` };
 
     } },
 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      .Table {
+        border-collapse: collapse;
+        margin-left: 150px;
+        width: 80%;
+        border: 1px solid #ddd;
+        font-size: 18px;
+      }
+
+      .Table2 {
+        margin-top: 50px;
+        border-collapse: collapse;
+        margin-left: 150px;
+        width: 20%;
+        border: 1px solid #ddd;
+        font-size: 18px;
+      }
+      
+      .Table th, .Table td, .Table2 th, .Table2 td {
+        text-align: center;
+        padding: 12px;
+      }
+      
+      .Table tr, .Table2 tr {
+        border-bottom: 1px solid #ddd;
+      }
+      
+      .Table tr.header, .Table tr:hover, .Table2 tr.header, .Table2 tr:hover {
+        background-color: #f1f1f1;
+      }
+
+      @media only screen and (max-width: 700px) {
+          .Table2{
+              margin-left: 50px ;
+              width: 100%;
+          }
+          .Table{
+            margin-left: 0;
+          }
+      }
+      </style>
+</head>
+<body>
+  <h1 style="text-align: center;">Details of <%= status.uid %></h1>
+    <table border="1" class="Table">
+        <tr class="header">
+          <th>UID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Paid Status</th>
+        </tr>
+        <tr class="header">
+          <td><%= status.uid%></td>
+          <td><%= status.name %></td>
+          <td><%= status.username%></td>
+          <td><%= status.paidstatus%></td>
+        </tr>
+      </table>
+</body>
+</html>
