@@ -12,6 +12,7 @@
     <title>Login</title>
   </head>
   <body>
+    <%- include('partials/preloader') %>
     <a href="/" class="homelogo" ><i class="fa fa-home fa-3x" ></i></a> 
     <div class="container">
         <form action="/login" method="POST">
@@ -43,6 +44,9 @@
         title: err
       });
     </script>
+              <script>
+                history.pushState(null, null, window.location.pathname);
+              </script>
   <% } %>
   <% if(message) { %>
     <script src="js/sweet.js"></script>
@@ -53,9 +57,9 @@
         title: message
       });
     </script>
+              <script>
+                history.pushState(null, null, window.location.pathname);
+              </script>
   <% } %>
-  <script>
-    history.pushState(null, null, window.location.pathname);
-  </script>
   </body>
 </html>

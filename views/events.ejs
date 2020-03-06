@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,8 +9,14 @@
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+		<style>
+			html,body{
+				width:100vw;
+			}
+		</style>
 	</head>
 	<body>
+		<%- include('partials/preloader') %>
 		<%- include('partials/modal') %>
 		<a href="/" class="homelogo" ><i class="fa fa-home fa-3x" ></i></a>
 		<div class="wrap">
