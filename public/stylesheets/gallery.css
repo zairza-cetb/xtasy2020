@@ -196,7 +196,7 @@ background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, F
   }
 
   .homelogo{
-    position: absolute;
+    /* position: absolute; */
     top: 0px;
     left: 0px;
     margin: 5px 5px;
