@@ -6,6 +6,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var handler = require('./routes/handler');
 const favicon = require('express-favicon');
+var secure = require('express-force-https');
 var app = express();
 
 
@@ -13,6 +14,7 @@ var app = express();
 
 // view engine setup
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
+app.use(secure);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
