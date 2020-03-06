@@ -1,5 +1,7 @@
 <style>
-
+body{
+        overflow:hidden;
+}
 .loader {
         position: relative;
         width: 75px;
@@ -416,7 +418,8 @@ border-radius: 50%;
 }
 }
 </style>
-<div class="preloader" style=" height: 130vh; width: 100vw; z-index: 10000; position: absolute; background: #EA4961; ">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<div class="preloader" style=" height: 100vh; width: 100vw; z-index: 1000002; position: absolute; background: #EA4961; ">
   <center style=" height: 100vh; position: relative; ">
   <div class="loader" style="
 margin: 0;
@@ -439,7 +442,7 @@ transform: translate(-50%, -50%);
 $(window).on("load", function() {
 setTimeout(function(){
 $(".preloader").remove();
-
-}, 1000);
+document.body.style.overflow = "scroll";
+}, 0);
 });
 </script>
