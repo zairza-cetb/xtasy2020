@@ -1,6 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Bangers);
+html, body{
+  height: 100%;
+  width:100%;
+}
 body {
-  margin: 40px 0;
+  /* margin: 40px 0; */
   font-family: "Raleway";
   font-size: 14px;
   font-weight: 500;
@@ -179,9 +183,10 @@ h2 {
 
 .homelogo{
   float: left;
-  margin-top: -20px;
+  margin-top: 20px;
   margin-left: 20px; 
   color: black;
+  
 }   
 .card-bg {
   background-image: url('/images/xtasy.jpg');

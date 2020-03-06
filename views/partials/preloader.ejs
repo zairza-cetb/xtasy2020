@@ -419,7 +419,7 @@ border-radius: 50%;
 }
 </style>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<div class="preloader" style=" height: 100vh; width: 100vw; z-index: 1000002; position: absolute; background: #EA4961; ">
+<div class="preloader" style=" height: 100vh; width: 100vw; z-index: 1000003; position: fixed;top:0;right:0; background: #EA4961; ">
   <center style=" height: 100vh; position: relative; ">
   <div class="loader" style="
 margin: 0;
@@ -427,7 +427,7 @@ position: absolute;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
-">
+z-index: 1000003;">
   <div class="loader__bar"></div>
   <div class="loader__bar"></div>
   <div class="loader__bar"></div>
@@ -442,7 +442,7 @@ transform: translate(-50%, -50%);
 $(window).on("load", function() {
 setTimeout(function(){
 $(".preloader").remove();
-document.body.style.overflow = "scroll";
-}, 0);
+document.body.style.overflow = "auto";
+}, 2000);
 });
 </script>
