@@ -442,8 +442,10 @@ input {
 }
 
 .card-1 .card-heading {
-  background: url("../images/xtasy2020white.png") center/cover no-repeat;
-  padding-top: 210px;
+
+  background: url("../images/xtasy.jpg") center/cover no-repeat;
+  padding-top: 100px;
+  padding-bottom: 260px;
 }
 
 .card-1 .card-body {
@@ -530,6 +532,11 @@ a:hover {
     padding: 0 40px;
     padding-top: 40px;
     padding-bottom: 40px;
+  }
+  .card-1 .card-heading {
+    background: url("../images/xtasy.jpg") center/cover no-repeat;
+    padding-top: 10px;
+    padding-bottom: 200px;
   }
 }
 
