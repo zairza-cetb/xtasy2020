@@ -5,16 +5,26 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Events</title>
 		<link rel="shortcut icon" href="favicon.ico">
-        <link rel="stylesheet" type="text/css" href="stylesheets/base.css"/>
+		<link rel="stylesheet" type="text/css" href="stylesheets/base.css"/>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 	</head>
     
 	<body>
 		<%- include('partials/modal') %>
+		<a href="/" class="homelogo" ><i class="fa fa-home fa-3x" ></i></a>
+		<div class="title">
+            <span class="top right"></span>
+            <span class="top left"></span>
+            <h2>Events</h2>
+            <span class="bottom right"></span>
+            <span class="bottom left"></span>
+        </div>
 		<div class="wrap">
 			<h1>Flagship Events</h1>
 		</div>
+
 		<div id="app" class="container">
 			<% for(var i=1;i<41;i++) { %>
 				<% if (evjson[i]["cat"].trim() === "Flagship" ){ %>

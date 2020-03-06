@@ -6,7 +6,7 @@
 }
 
 body {
-  background-image: url("../images/bg1.jpg");
+  background-image: url("../images/texturebg.png");
   background-size: cover;
   background-position: 50% 50%;
   min-height: 100vh;
@@ -50,7 +50,7 @@ body:after {
     }
     
     .title-img {
-      height: 25vh;
-      width: 70vw;
+      height: 24vh;
+      width: 80vw;
     }
   }
