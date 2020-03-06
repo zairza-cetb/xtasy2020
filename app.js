@@ -5,9 +5,14 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var handler = require('./routes/handler');
+const favicon = require('express-favicon');
 var app = express();
 
+
+
+
 // view engine setup
+app.use(favicon(__dirname + '/public/images/favicon.ico'));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 

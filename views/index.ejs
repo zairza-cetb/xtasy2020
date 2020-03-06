@@ -33,6 +33,9 @@
           title: message
         });
       </script>
+      <script>
+        history.pushState(null, null, window.location.pathname);
+      </script>
     <% } %>
     <% if(registered) { %>
       <div class="register">
@@ -40,12 +43,26 @@
           Swal.fire({
             position: 'top',
             icon: 'success',
-            title: 'You have successfully registered for Perception 2020.',
+            title: 'You have successfully registered for Xtasy 2020.',
             showConfirmButton: false,
             timer: 7000
           })
           </script>
+          
         </div>
       <% } %>
+      <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/5e6218d3c32b5c191739ea60/default';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
   </body>
 </html>
