@@ -180,8 +180,8 @@ h2 {
 .card-bg {
   background-image: url('/images/xtasy.jpg');
 }
-@media screen and (max-width: 50em) {
-  h1 {
-    font-size: 15vw;
+@media screen and (max-width: 786px) {
+  .wrap h1 {
+    font-size: 3em;
   }
 }
