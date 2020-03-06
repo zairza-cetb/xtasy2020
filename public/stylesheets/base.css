@@ -1,22 +1,42 @@
+@import url(https://fonts.googleapis.com/css?family=Bangers);
 body {
   margin: 40px 0;
   font-family: "Raleway";
   font-size: 14px;
   font-weight: 500;
-  background-color: #ECECEC;
+  background-color: #ED6565;
   -webkit-font-smoothing: antialiased;
 }
 
-
-.title {
-  font-family: "Raleway";
-  font-size: 3.5em;
-  font-weight: 700;
-  color: #5D4037;
-  text-align: center;
-  position: relative;
-  margin: 50px auto;
+.wrap {
+  padding: 5em 0.5em;
+  margin: 0 auto;
 }
+
+.wrap h1 {
+  text-align: center;
+  font-weight: normal;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 8em;
+  white-space: nowrap;
+  z-index: 1000;
+  font-family: 'Bangers', cursive;
+  text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.7);
+  -moz-transform: skew(0, -6.7deg);
+  -ms-transform: skew(0, -6.7deg);
+  -webkit-transform: skew(0, -6.7deg);
+  transform: skew(0, -6.7deg);
+  -moz-transition-property: font-size;
+  -o-transition-property: font-size;
+  -webkit-transition-property: font-size;
+  transition-property: font-size;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
 
 p {
   line-height: 1.5em;
@@ -34,31 +54,6 @@ h2 {
   margin: 0 20px;
   padding: 0 15px;
   text-transform: uppercase;
-}
-span {
-  display: inline-block;
-  position: absolute;
-  background: #faa;
-  height: 3px;
-}
-span.top {
-  width: 70px;
-  top: 20px;
-}
-span.bottom {
-  width: 120px;
-  top: 35px;
-}
-span.left {
-  left: 48%;
-  transform: translateX(-150px);
-}
-span.bottom.left {
-  transform: translateX(-200px);
-}
-span.right {
-  left: 52%;
-  transform: translateX(80px);
 }
 
 .container {
@@ -182,6 +177,18 @@ span.right {
   text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
 }
 
+.homelogo{
+  float: left;
+  margin-top: -20px;
+  margin-left: 20px; 
+  color: black;
+}   
 .card-bg {
   background-image: url('/images/xtasy.jpg');
 }
+@media screen and (max-width: 786px) {
+  .wrap h1 {
+    font-size: 3em;
+  }
+}
+
