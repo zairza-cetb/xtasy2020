@@ -5,6 +5,7 @@
   position: relative;
   top: 12vh;
   float: right;
+  left: 60px;
   max-width: 200px;
   -webkit-transform: translateY(-50%) translateX(-50%);
           transform: translateY(-50%) translateX(-50%);
@@ -12,9 +13,7 @@
   -webkit-filter: drop-shadow(0 0 40px rgba(0, 0, 0, 0.3));
           filter: drop-shadow(0 0 40px rgba(0, 0, 0, 0.3));
 }
- .btn-svg:hover {
-  cursor: pointer;
-}
+
  .btn-svg path {
   cursor: pointer;
   -webkit-animation: blob 2s infinite forwards;
@@ -24,6 +23,7 @@
 }
  .btn-svg path:hover {
   fill: #fafafa;
+  cursor: pointer;
 }
  .btn-svg text {
   font-size: 45px;
@@ -63,6 +63,11 @@
 @media screen and (min-width: 786px) {
   .btn-svg {
     width: 80vw;
+  }
+}
+@media screen and (max-width:768px){
+  .btn-svg{
+    left: 30px;
   }
 }
 </style>
