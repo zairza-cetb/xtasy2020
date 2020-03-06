@@ -177,9 +177,16 @@ h2 {
   text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
 }
 
+.homelogo{
+  float: left;
+  margin-top: -20px;
+  margin-left: 20px; 
+  color: black;
+}   
 .card-bg {
   background-image: url('/images/xtasy.jpg');
 }
+
 @media screen and (max-width: 786px) {
   .wrap h1 {
     font-size: 3em;

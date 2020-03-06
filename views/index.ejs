@@ -4,21 +4,23 @@
     <title>Xtasy2020</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
   </head>
   <body>
-    <%- include('partials/loginbutton') %>
-    <section >
+  <%- include('partials/preloader') %>
+  <%- include('partials/loginbutton') %>
+<section >
       <div class="title-div">
         <div class="img-fluid title-img-div" >
           <img src="images/xtasy2020white.png" class="title-img">
         </div>
       </div>
-      <div style="height: 30vh;"> 
+
+      <div style="height: 30vh;">
         <%- include('partials/timer') %>
       </div>
       <center>
@@ -33,6 +35,9 @@
           title: message
         });
       </script>
+      <script>
+        history.pushState(null, null, window.location.pathname);
+      </script>
     <% } %>
     <% if(registered) { %>
       <div class="register">
@@ -40,12 +45,26 @@
           Swal.fire({
             position: 'top',
             icon: 'success',
-            title: 'You have successfully registered for Perception 2020.',
+            title: 'You have successfully registered for Xtasy 2020.',
             showConfirmButton: false,
             timer: 7000
           })
           </script>
+          
         </div>
       <% } %>
+      <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/5e6218d3c32b5c191739ea60/default';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
   </body>
 </html>

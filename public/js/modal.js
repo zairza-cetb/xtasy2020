@@ -3,6 +3,9 @@ $(document).ready(function() {
 
   $(".evbtn").click(function(event) {
     window.currentItem = $(event.target);
+    if (!$(currentItem).hasClass("card-wrap")) {
+      currentItem = $(currentItem).parents("div.card-wrap.evbtn");
+    }
     console.log("clicked", currentItem);
     if (!$(mod).hasClass("mod--show")) {
       let eventID = $(currentItem).attr("id")

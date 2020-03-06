@@ -11,6 +11,7 @@
     <title>Login</title>
   </head>
   <body>
+    <a href="/" class="homelogo" ><i class="fa fa-home fa-3x" ></i></a> 
     <div class="container">
         <form action="/login" method="POST">
           <h1>
@@ -19,7 +20,7 @@
           <div class="form-content">
             <input id="user-name" name="username" placeholder="Email" type="text" required />
             <input id="password" name="password" placeholder="Password" type="password" required /><br />
-            <input class="button" type="submit">
+            <input class="button" type="submit" value="Submit">
             <br />
             <div class="signup-message">
               <a href="/resetPassword">Forgot your password?</a>
@@ -52,5 +53,8 @@
       });
     </script>
   <% } %>
+  <script>
+    history.pushState(null, null, window.location.pathname);
+  </script>
   </body>
 </html>
