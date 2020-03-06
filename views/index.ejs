@@ -4,21 +4,23 @@
     <title>Xtasy2020</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
   </head>
   <body>
-    <%- include('partials/loginbutton') %>
-    <section >
+  <%- include('partials/preloader') %>
+  <%- include('partials/loginbutton') %>
+<section >
       <div class="title-div">
         <div class="img-fluid title-img-div" >
           <img src="images/xtasy2020white.png" class="title-img">
         </div>
       </div>
-      <div style="height: 30vh;"> 
+
+      <div style="height: 30vh;">
         <%- include('partials/timer') %>
       </div>
       <center>
