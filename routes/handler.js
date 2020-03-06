@@ -4,6 +4,7 @@ var express = require('express'),
     localStrategy = require('passport-local'),
     User = require('../model/users'),
     nodemailer =require("nodemailer"),
+    ResetRequest = require('../model/resetRequest'),
     ejs = require('ejs'),
     path = require("path"),
     router = express.Router();
@@ -159,6 +160,117 @@ router.get('/logout', (req, res) => {
     req.logout();
     res.redirect("/?logoutSuccess=1");
 });
+
+
+  // Forgot password form posts here with username(email address) and phone number in body
+  router.post('/forgotpassword', (req, res) => {
+    User.findOne({
+      username: req.body.username,
+      phone: req.body.phone,
+    }, (err, user) => {
+      let message;
+      if (err) {
+        message = "Sorry, There seems to be a problem at our end";
+        if (req.query.ref) {
+          res.redirect(`/login?ref=${req.query.ref}&err=${message}`);
+        } else {
+          res.redirect(`/login?err=${message}&ref=`);
+        }
+      } else if (!user) {
+        message = "An account with the given credentials does not exist";
+        if (req.query.ref) {
+          res.redirect(`/login?ref=${req.query.ref}&err=${message}`);
+        } else {
+          res.redirect(`/login?err=${message}&ref=`);
+        }
+      } else {
+        // create a new password reset request
+        const resetRequest = new ResetRequest({
+          r_id: user._id,
+        });
+
+        // save the request to the database
+        resetRequest.save((err, request) => {
+          if (err) {
+            message = "Sorry, There seems to be a problem at our end";
+            if (req.query.ref) {
+              res.redirect(`/login?ref=${req.query.ref}&err=${message}`);
+            } else {
+              res.redirect(`/login?err=${message}&ref=`);
+            }
+            return;
+          }
+
+          // Send an E-Mail with a password reset link with id of the request
+          transporter.sendMail({
+            from: 'Xtasy 2020 Team, CETB',
+            to: user.username,
+            subject: 'Xtasy 2020 | Password reset',
+            text: `Hi, ${user.name}\t\nWe received a request to reset your Xtasy 2020 password. If this wasn't you, you can safely ignore this email, otherwise please go to the following link to reset your password:\nhttps://xtasy.cet.edu.in/resetpassword/${resetRequest._id}\n\nThe Xtasy 2020 Team`,
+          }, function (error, info) {
+            if (error) {
+              message = "Sorry, There seems to be a problem at our end";
+              if (req.query.ref) {
+                res.redirect(`/login?ref=${req.query.ref}&err=${message}`);
+              } else {
+                res.redirect(`/login?err=${message}&ref=`);
+              }
+            } else {
+              message = "Please check your E-Mail (also check your spam folder) for instructions on how to reset your password";
+              if (req.query.ref) {
+                res.redirect(`/login?ref=${req.query.ref}&message=${message}`);
+              } else {
+                res.redirect(`/login?message=${message}&ref=`);
+              }
+            }
+          });
+        });
+      }
+    });
+  });
+
+  // Reset password form posts here with new password
+  router.post('/resetpassword/:resetRequestID', function(req, res, next) {
+    ResetRequest.findByIdAndDelete(req.params.resetRequestID, function(requestError, resetRequest) {
+      if (requestError || !resetRequest) {
+        if (req.query.ref) {
+          res.redirect(`/login?ref=${req.query.ref}&err=Invalid password reset link, Please go to Forgot Password to request another link`);
+        } else {
+          res.redirect('/login?err=Invalid password reset link, Please go to Forgot Password to request another link&ref=');
+        }
+      } else {
+        User.findById(resetRequest.r_id, function(userError, user) {
+          user.setPassword(req.body.password, function(hashingError, updatedUser) {
+            if (hashingError || !updatedUser) {
+              if (req.query.ref) {
+                res.redirect(`/login?ref=${req.query.ref}&err=Sorry, There seems to be a problem at our end`);
+              } else {
+                res.redirect('/login?err=Sorry, There seems to be a problem at our end&ref=');
+              }
+            } else {
+              updatedUser.save()
+              .then(() => {
+                if (req.query.ref) {
+                  res.redirect(`/login?ref=${req.query.ref}&message=Your password has been successfully reset. Please login to continue`);
+                } else {
+                  res.redirect('/login?message=Your password has been successfully reset. Please login to continue&ref=');
+                }
+              })
+              .catch(saveError => {
+                if (req.query.ref) {
+                  res.redirect(`/login?ref=${req.query.ref}&err=Sorry, There seems to be a problem at our end`);
+                } else {
+                  res.redirect('/login?err=Sorry, There seems to be a problem at our end&ref=');
+                }
+              });
+            }
+          });
+        });
+      }
+    });
+  });
+
+/////////////////////////////////////////////////////////////////
 
 /* Backend for event registration */
 router.get('/register/:eventID', (req, res) => {
