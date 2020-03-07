@@ -1,0 +1,368 @@
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<style>
+  /* #Navigation
+================================================== */
+  .start-header {
+    opacity: 1;
+    transform: translateY(0);
+    padding: 10px 0;
+    box-shadow: 0 10px 30px 0 rgba(138, 155, 165, 0.15);
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  .start-header.scroll-on {
+    box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
+    padding: 5px 0;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  .start-header.scroll-on .navbar-brand img {
+    height: 28px;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  .navigation-wrap {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  .navbar {
+    padding: 0;
+  }
+  .navbar-brand img {
+    height: 50px;
+    width: auto;
+    display: block;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  .navbar-toggler {
+    float: right;
+    border: none;
+    padding-right: 0;
+  }
+  .navbar-toggler:active,
+  .navbar-toggler:focus {
+    outline: none;
+  }
+  .navbar-light .navbar-toggler-icon {
+    width: 24px;
+    height: 17px;
+    background-image: none;
+    position: relative;
+    border-bottom: 1px solid #000;
+    transition: all 300ms linear;
+  }
+  .navbar-light .navbar-toggler-icon:after,
+  .navbar-light .navbar-toggler-icon:before {
+    width: 24px;
+    position: absolute;
+    height: 1px;
+    background-color: #000;
+    top: 0;
+    left: 0;
+    content: "";
+    z-index: 2;
+    transition: all 300ms linear;
+  }
+  .navbar-light .navbar-toggler-icon:after {
+    top: 8px;
+  }
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+    transform: rotate(45deg);
+  }
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+    transform: translateY(8px) rotate(-45deg);
+  }
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    border-color: transparent;
+  }
+  .nav-link {
+    color: #212121 !important;
+    font-weight: 500;
+    transition: all 200ms linear;
+  }
+  .nav-item:hover .nav-link {
+    color: #8167a9 !important;
+  }
+  .nav-item.active .nav-link {
+    color: #777 !important;
+  }
+  .nav-link {
+    position: relative;
+    padding: 5px 0 !important;
+    display: inline-block;
+  }
+  .nav-item:after {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    content: "";
+    background-color: #8167a9;
+    opacity: 0;
+    transition: all 200ms linear;
+  }
+  .nav-item:hover:after {
+    bottom: 0;
+    opacity: 1;
+  }
+  .nav-item.active:hover:after {
+    opacity: 0;
+  }
+  .nav-item {
+    position: relative;
+    transition: all 200ms linear;
+  }
+  .nav-item .dropdown-menu {
+    transform: translate3d(0, 10px, 0);
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    display: block;
+    padding: 0;
+    margin: 0;
+    transition: all 200ms linear;
+  }
+  .nav-item.show .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    max-height: 999px;
+    transform: translate3d(0, 0px, 0);
+  }
+  .dropdown-menu {
+    padding: 10px !important;
+    margin: 0;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #212121;
+    background-color: #fcfaff;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
+    transition: all 200ms linear;
+  }
+  .dropdown-toggle::after {
+    display: none;
+  }
+  .dropdown-item {
+    padding: 3px 15px;
+    color: #212121;
+    border-radius: 2px;
+    transition: all 200ms linear;
+  }
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    color: #fff;
+    background-color: rgba(129, 103, 169, 0.6);
+  }
+  .dark {
+    color: #fff;
+    background-color: #1f2029;
+  }
+  .dark h1 {
+    color: #fff;
+  }
+  .dark h1 span {
+    transition-delay: 0ms !important;
+  }
+  .dark p {
+    color: #fff;
+    transition-delay: 0ms !important;
+  }
+  .dark .bg-light {
+    background-color: #14151a !important;
+  }
+  .dark .start-header {
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
+  }
+  .dark .start-header.scroll-on {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+  }
+  .dark .nav-link {
+    color: #fff !important;
+  }
+  .dark .nav-item.active .nav-link {
+    color: #999 !important;
+  }
+  .dark .dropdown-menu {
+    color: #fff;
+    background-color: #1f2029;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+  }
+  .dark .dropdown-item {
+    color: #fff;
+  }
+  .dark .navbar-light .navbar-toggler-icon {
+    border-bottom: 1px solid #fff;
+  }
+  .dark .navbar-light .navbar-toggler-icon:after,
+  .dark .navbar-light .navbar-toggler-icon:before {
+    background-color: #fff;
+  }
+  .dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    border-color: transparent;
+  }
+  /* #Media
+================================================== */
+  @media (max-width: 767px) {
+    
+    .nav-item:after {
+      display: none;
+    }
+    .nav-item::before {
+      position: absolute;
+      display: block;
+      top: 15px;
+      left: 0;
+      width: 11px;
+      height: 1px;
+      content: "";
+      border: none;
+      background-color: #000;
+      vertical-align: 0;
+    }
+    .dropdown-toggle::after {
+      position: absolute;
+      display: block;
+      top: 10px;
+      left: -23px;
+      width: 1px;
+      height: 11px;
+      content: "";
+      border: none;
+      background-color: #000;
+      vertical-align: 0;
+      transition: all 200ms linear;
+    }
+    .dropdown-toggle[aria-expanded="true"]::after {
+      transform: rotate(90deg);
+      opacity: 0;
+    }
+    .dropdown-menu {
+      padding: 0 !important;
+      background-color: transparent;
+      box-shadow: none;
+      transition: all 200ms linear;
+    }
+    .dropdown-toggle[aria-expanded="true"] + .dropdown-menu {
+      margin-top: 10px !important;
+      margin-bottom: 20px !important;
+    }
+    .dark .nav-item::before {
+      background-color: #fff;
+    }
+    .dark .dropdown-toggle::after {
+      background-color: #fff;
+    }
+    .dark .dropdown-menu {
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+</style>
+<div class="dark">
+  <div class="navigation-wrap bg-light start-header start-style">
+    <div class="row">
+      <div class="col-10">
+        <nav class="navbar navbar-expand-md navbar-light" style="left:10vw;">
+          <a class="navbar-brand" href="/"
+            ><img src="../images/xtasy2020white.png" alt=""
+          /></a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon" style="right: 10vw;"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto py-4 py-md-0">
+              <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 ">
+                <a
+                  class="nav-link "
+                  href="/"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Home</a
+                >
+              </li>
+
+              <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                <a class="nav-link" href="/events">Events</a>
+              </li>
+              <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                <a class="nav-link" href="/gallery">Gallery</a>
+              </li>
+              <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                <a class="nav-link" href="/sponsors">Sponsors</a>
+              </li>
+              <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                <a class="nav-link" href="/stars">Star Night</a>
+              </li>
+              <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                <a class="nav-link" href="/team">Our Team</a>
+              </li>
+              <% if(!currentUser) { %>
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                  <a class="nav-link" href="/login">Login</a>
+                </li>
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                  <a class="nav-link" href="/register">Register</a>
+                </li>
+              <% } else { %> 
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                  <a class="nav-link" href="/profile">Profile</a>
+                </li>
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                  <a class="nav-link" href="/logout">Logout</a>
+                </li>
+              <% } %> 
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function($) {
+    $(function() {
+      var header = $(".start-style");
+      $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 10) {
+          header.removeClass("start-style").addClass("scroll-on");
+        } else {
+          header.removeClass("scroll-on").addClass("start-style");
+        }
+      });
+    });
+    //Menu On Hover
+    $("dark").on("mouseenter mouseleave", ".nav-item", function(e) {
+      if ($(window).width() > 750) {
+        var _d = $(e.target).closest(".nav-item");
+        _d.addClass("show");
+        setTimeout(function() {
+          _d[_d.is(":hover") ? "addClass" : "removeClass"]("show");
+        }, 1);
+      }
+    });
+  });
+</script>

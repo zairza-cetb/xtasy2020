@@ -8,23 +8,44 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/profile.css" />
   </head>
   <body >
+    <%- include('partials/navbar1') %>
     <div class="title">
       <span class="top right"></span>
       <span class="top left"></span>
       <span class="bottom right"></span>
       <span class="bottom left"></span>
     </div>
-    <div class="card">
-        <img src="images/pp.jpg" alt="John" style="width:100%" height="260px">
-        <h2>UID: <%= data.uid %></h2>
-        <h1><%= data.name %></h1>
-        <div class="cont">
-          <p>Email:<%= data.username %></p>
-          <p>Gender:<%= data.gender %></p>
-          <p>College:<%= data.college %></p>
-          <p>Phone:<%= data.phone %></p>
-          <p>Payment status:<%= data.paidstatus %></p>
+
+    <div class="bgtint"></div>
+    <section class="bussinesscard">
+      <div class="flip">
+        <div class="front">				
+          <div class="top">				
+            <div class="logo"><span class="fat"><%= data.uid %></span></div>				
+          </div>
+          <div class="nametroduction">
+            <div class="name"><%= data.name %></div>
+            <!-- <div class="introduction"><%= data.uid %></div> -->
+          </div>	
+          <div class="contact">						
+            <div class="website">
+              <p>Email:<%= data.username %></p>
+            <div class="twitter">
+              <p>Gender:<%= data.gender %></p>
+            </div>												
+            <div class="phone ">
+              <p>Phone:<%= data.phone %></p> 
+            </div>
+            <div class="email ">
+              <p>College:<%= data.college %></p>
+            </div>
+            <div class="email ">
+              <p>Payment status:<%= data.paidstatus %></p>
+            </div>
+          </div>						
         </div>
-      </div>      
+        <div class="back"></div> 
+      </div>
+    </section>    
   </body>
 </html>
