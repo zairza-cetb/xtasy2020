@@ -250,12 +250,15 @@ a:hover {
     height: 400px;
   }
   .bussinesscard .front .nametroduction .name {
-    font-size: 1.2em;
+    font-size: 1.8em;
   }
   .bussinesscard .flip:hover .front .nametroduction .name {
-    font-size: 0.8em;
+    font-size: 1.3em;
   }
   .bussinesscard .contact {
     margin-top: 25px;
+  }
+  .bussinesscard .front .contact p {
+    font-size: 50px;
   }
 }
