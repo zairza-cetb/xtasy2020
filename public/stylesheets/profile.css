@@ -102,7 +102,7 @@ a:hover {
   -ms-transform: translateX(-50%) rotate(45deg);
   -webkit-transform: translateX(-50%) rotate(45deg);
   transform: translateX(-50%) rotate(45deg);
-  bottom: 9em;
+  bottom: 50%;
   z-index: 10;
   background: inherit;
 }
@@ -250,7 +250,7 @@ a:hover {
     height: 400px;
   }
   .bussinesscard .front .nametroduction .name {
-    font-size: 1.8em;
+    font-size: 1.5em;
   }
   .bussinesscard .flip:hover .front .nametroduction .name {
     font-size: 1.3em;
@@ -260,5 +260,8 @@ a:hover {
   }
   .bussinesscard .front .contact p {
     font-size: 1rem;
+  }
+  .flip:hover .front .top:after {
+    top:40px;
   }
 }
