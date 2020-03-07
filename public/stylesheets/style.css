@@ -29,9 +29,9 @@ body:after {
 }
 
 .title-img {
-  height: 70vh;
+  height: 55vh;
   width: 75vw;
-  padding-top: 2%;
+  /* padding-top: 2%; */
 }
 
 @media screen and (max-width: 767px) {
