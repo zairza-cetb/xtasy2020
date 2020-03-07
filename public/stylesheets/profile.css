@@ -13,7 +13,7 @@
 
 body, html {
   font-family: 'Raleway', sans-serif;
-  background: url(https://unsplash.imgix.net/uploads/141310026617203b5980d/c86b8baa?q=75&fm=jpg&s=be8d1e8254844f53e56583bd49cf5e77);
+  background: url();
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -241,4 +241,21 @@ a:hover {
   -ms-transform: translateY(-52%);
   -webkit-transform: translateY(-52%);
   transform: translateY(-52%);
+}
+
+@media (max-width: 767px) {
+
+  .bussinesscard {
+    width: 400px;
+    height: 300px;
+  }
+  .bussinesscard .front .nametroduction .name {
+    font-size: 2em;
+  }
+  .bussinesscard .flip:hover .front .nametroduction .name {
+    font-size: 1.5em;
+  }
+  .bussinesscard .contact {
+    margin-top: 25px;
+  }
 }
