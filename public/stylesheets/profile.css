@@ -246,8 +246,8 @@ a:hover {
 @media (max-width: 767px) {
 
   .bussinesscard {
-    width: 400px;
-    height: 300px;
+    width: 250px;
+    height: 200px;
   }
   .bussinesscard .front .nametroduction .name {
     font-size: 2em;
