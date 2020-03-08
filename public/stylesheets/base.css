@@ -186,6 +186,7 @@ h2 {
   margin-top: 20px;
   margin-left: 20px; 
   color: black;
+  position: fixed;
   
 }   
 .card-bg {

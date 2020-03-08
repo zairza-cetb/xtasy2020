@@ -145,6 +145,10 @@ router.get("/evadmintable", (req, res) => {
 	});
 });
 
+router.get('/resetpassword/:resetRequestID', function(req, res) {
+	res.render('resetpassword');
+})
+
 /* Hash function */
 String.prototype.hashCode = function(){
 	var hash = 0;

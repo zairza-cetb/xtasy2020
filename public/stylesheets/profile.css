@@ -1,4 +1,3 @@
-
 @import url(https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900);
 @import url(https://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css);
@@ -103,7 +102,7 @@ a:hover {
   -ms-transform: translateX(-50%) rotate(45deg);
   -webkit-transform: translateX(-50%) rotate(45deg);
   transform: translateX(-50%) rotate(45deg);
-  bottom: 9em;
+  bottom: 50%;
   z-index: 10;
   background: inherit;
 }
@@ -141,7 +140,7 @@ a:hover {
 .bussinesscard .front .name {
   color: #2a2b39;
   font-weight: 400;
-  font-size: 2.2em;
+  font-size: 2em;
   text-align: center;
   position: relative;
   margin-bottom: .35em;
@@ -166,12 +165,14 @@ a:hover {
   color: #2a2b39;
   margin-left: 1.7em;
   font-weight: 300;
-  font-size: 1.6em;
+  font-size: 1rem;
+  line-height: 0.5rem;
   -moz-transform: translateY(400%);
   -ms-transform: translateY(400%);
   -webkit-transform: translateY(400%);
   transform: translateY(400%);
 }
+
 .bussinesscard .front .contact span {
   color: #2D3244;
   font-size: 1.2em;
@@ -243,3 +244,25 @@ a:hover {
   transform: translateY(-52%);
 }
 
+@media (max-width: 767px) {
+
+  .bussinesscard {
+    width: 250px;
+    height: 400px;
+  }
+  .bussinesscard .front .nametroduction .name {
+    font-size: 1.5em;
+  }
+  .bussinesscard .flip:hover .front .nametroduction .name {
+    font-size: 1.3em;
+  }
+  .bussinesscard .contact {
+    margin-top: 25px;
+  }
+  .bussinesscard .front .contact p {
+    font-size: 0.8rem;
+  }
+  .flip:hover .front .top:after {
+    top:40px;
+  }
+}
