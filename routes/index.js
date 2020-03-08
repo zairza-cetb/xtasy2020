@@ -62,6 +62,10 @@ router.get("/login", function (req, res, next) {
 	});}
 });
 
+router.get('/resetpassword/:resetRequestID', function(req, res) {
+	res.render('resetpassword');
+})
+
 /* GET resetPassword page. */
 router.get("/resetPassword", function (req, res, next) {
   res.render("resetPassword");
@@ -144,10 +148,6 @@ router.get("/evadmintable", (req, res) => {
 		  res.render('evadmindata', { data: data, value: req.query.value, evjson: events_json });
 	});
 });
-
-router.get('/resetpassword/:resetRequestID', function(req, res) {
-	res.render('resetpassword');
-})
 
 /* Hash function */
 String.prototype.hashCode = function(){
