@@ -72,6 +72,7 @@ div.card {
   letter-spacing: -0.05em;
   margin: 0;
   padding: 0;
+  text-align: center;
   }
   div.card div.card-title h2 small {
   display: block;
@@ -181,10 +182,3 @@ div.card {
 }
 }
 
-.homelogo{
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  margin: 5px 5px;
-  color:black;
-}
