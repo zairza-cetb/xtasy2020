@@ -165,13 +165,14 @@ a:hover {
   color: #2a2b39;
   margin-left: 1.7em;
   font-weight: 300;
-  font-size: 1.6em;
-  line-height: 0.5em;
+  font-size: 1rem;
+  line-height: 0.5rem;
   -moz-transform: translateY(400%);
   -ms-transform: translateY(400%);
   -webkit-transform: translateY(400%);
   transform: translateY(400%);
 }
+
 .bussinesscard .front .contact span {
   color: #2D3244;
   font-size: 1.2em;
@@ -259,7 +260,7 @@ a:hover {
     margin-top: 25px;
   }
   .bussinesscard .front .contact p {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .flip:hover .front .top:after {
     top:40px;
